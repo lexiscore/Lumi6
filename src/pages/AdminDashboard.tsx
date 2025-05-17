@@ -4,16 +4,18 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileText, Mic, FilePlus } from "lucide-react";
+import { Mic, ArrowRight } from "lucide-react";
 import AdminHeader from "@/components/admin/AdminHeader";
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const { toast } = useToast();
 
-  const handleCreateTest = (testType: string) => {
-    navigate(`/admin/create-test/${testType}`);
+  const handleCreateTest = () => {
+    navigate("/admin/create-test/speaking");
   };
 
   return (
@@ -37,76 +39,51 @@ export default function AdminDashboard() {
             </TabsList>
             
             <TabsContent value="create-test" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <FileText className="h-8 w-8 mb-2 text-blue-600" />
-                    <CardTitle>Proficiency Test</CardTitle>
-                    <CardDescription>
-                      Create tests for grammar, comprehension, reading and listening
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500">
-                      Evaluate language proficiency with comprehensive assessments across multiple skill areas.
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button 
-                      className="w-full" 
-                      onClick={() => handleCreateTest("proficiency")}
-                    >
-                      Create Test
-                    </Button>
-                  </CardFooter>
-                </Card>
-                
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <Mic className="h-8 w-8 mb-2 text-blue-600" />
-                    <CardTitle>Speaking Assessment</CardTitle>
-                    <CardDescription>
-                      Create speaking-only assessments for oral proficiency
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500">
-                      Evaluate pronunciation, fluency, coherence and overall speaking ability.
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button 
-                      className="w-full" 
-                      onClick={() => handleCreateTest("speaking")}
-                    >
-                      Create Test
-                    </Button>
-                  </CardFooter>
-                </Card>
-                
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <FilePlus className="h-8 w-8 mb-2 text-blue-600" />
-                    <CardTitle>Complete Assessment</CardTitle>
-                    <CardDescription>
-                      Create comprehensive tests combining proficiency and speaking
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500">
-                      Full language assessment covering all skills including speaking, listening, reading, and grammar.
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button 
-                      className="w-full" 
-                      onClick={() => handleCreateTest("complete")}
-                    >
-                      Create Test
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </div>
+              <Card className="hover:shadow-lg transition-shadow max-w-lg mx-auto">
+                <CardHeader className="bg-blue-50 rounded-t-lg border-b border-blue-100">
+                  <div className="flex items-center">
+                    <Mic className="h-10 w-10 mr-4 text-blue-600 p-2 bg-blue-100 rounded-full" />
+                    <div>
+                      <CardTitle className="text-2xl">Speaking Assessment</CardTitle>
+                      <CardDescription className="text-blue-700 mt-1">
+                        Create speaking assessments for CEFR-aligned oral proficiency
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="space-y-4">
+                    <h3 className="font-medium text-gray-800">Assessment includes:</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        <span>5 randomized speaking questions</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        <span>Introduction question as warm-up</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        <span>Video recording with time limits</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        <span>CEFR-aligned scoring methodology</span>
+                      </li>
+                    </ul>
+                  </div>
+                </CardContent>
+                <CardFooter className="pt-0 flex justify-end">
+                  <Button 
+                    onClick={handleCreateTest}
+                    className="gap-2"
+                  >
+                    Create Speaking Test
+                    <ArrowRight size={16} />
+                  </Button>
+                </CardFooter>
+              </Card>
             </TabsContent>
             
             <TabsContent value="test-library">

@@ -1,0 +1,293 @@
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useParams } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
+import { Mic, Video } from "lucide-react";
+
+// Mock questions for the speaking test
+const questions = [
+  "Please introduce yourself. How will this assessment be useful to you?",
+  "Describe what is happening in the picture. Describe what you can see. Give as much detail as you can.",
+  "Talk about your favorite hobby. Why do you enjoy it and how did you start?",
+  "Describe a recent trip you took. Where did you go and what did you do there?",
+  "Talk about a person who has influenced you. Who are they and how have they impacted your life?"
+];
+
+export default function CandidateTest() {
+  const { testId } = useParams();
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [isRecording, setIsRecording] = useState(false);
+  const [timer, setTimer] = useState(30);
+  const [recordingTime, setRecordingTime] = useState(0);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Simple validation for demo
+    if (email && password) {
+      setIsLoggedIn(true);
+      toast({
+        title: "Login successful",
+        description: "Welcome to the speaking assessment",
+      });
+    } else {
+      toast({
+        title: "Login failed",
+        description: "Please enter your email and password",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const startTest = () => {
+    setShowInstructions(false);
+  };
+
+  const startRecording = () => {
+    setIsRecording(true);
+    
+    // Countdown timer simulation
+    const countdownInterval = setInterval(() => {
+      setTimer((prev) => {
+        if (prev <= 1) {
+          clearInterval(countdownInterval);
+          simulateRecording();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  };
+
+  const simulateRecording = () => {
+    // Simulate recording time
+    const recordingInterval = setInterval(() => {
+      setRecordingTime((prev) => {
+        if (prev >= 60) {
+          clearInterval(recordingInterval);
+          handleSubmit();
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 1000);
+  };
+
+  const handleSubmit = () => {
+    setIsRecording(false);
+    setTimer(30);
+    setRecordingTime(0);
+    
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(prev => prev + 1);
+      toast({
+        title: "Answer submitted",
+        description: "Moving to the next question",
+      });
+    } else {
+      toast({
+        title: "Test completed!",
+        description: "Thank you for completing the speaking assessment",
+      });
+      // Would redirect to a completion page in a real implementation
+    }
+  };
+
+  if (!isLoggedIn) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+        <Card className="w-full max-w-md p-6">
+          <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center">
+              <span className="text-2xl font-bold text-blue-600">Lexi</span>
+              <span className="text-2xl font-semibold">Score</span>
+            </div>
+          </div>
+          
+          <h1 className="text-xl font-semibold text-center mb-6">Speaking Assessment</h1>
+          
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input 
+                id="email" 
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input 
+                id="password" 
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            
+            <Button type="submit" className="w-full">
+              Start Test
+            </Button>
+          </form>
+        </Card>
+      </div>
+    );
+  }
+
+  if (showInstructions) {
+    return (
+      <div className="min-h-screen bg-white p-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center gap-2 mb-8">
+            <img src="/placeholder.svg" alt="English Speaking Test" className="w-10 h-10 rounded-full" />
+            <h1 className="text-2xl font-bold text-blue-700">English Speaking Test</h1>
+          </div>
+          
+          <div className="mb-8">
+            <h2 className="text-xl text-blue-700">Take 5 minutes to find your speaking level.</h2>
+          </div>
+          
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4">Ready to start the test?</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Mic className="text-gray-600 mt-1 flex-shrink-0" />
+                  <p>Your audio and video devices should be enabled.</p>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="flex-shrink-0 mt-1">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                    <path d="M12 8V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M12 8V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                  <p>You cannot pause, exit and return to finish the test. You need to complete it in one go. If you close the page, you will lose access to the test and will not be able to continue.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="font-bold text-lg mb-4">How does the test work?</h3>
+              
+              <ul className="list-disc space-y-4 pl-6">
+                <li>You'll be tested on your speaking skills.</li>
+                <li>The assessment includes five (5) questions. The first one is a warm-up, which will help you practice for the test.</li>
+                <li>For each of the questions, you will have:
+                  <ul className="list-disc pl-8 mt-2 space-y-2">
+                    <li>a maximum of 40 seconds to read the question and prepare your answer. If you are ready to answer even before the 40 seconds is up, you can click on "Start recording".</li>
+                    <li>a maximum of 60 seconds to record your answer. Your answer will be automatically submitted after this time. You can also click on "Submit" after at least 30 seconds of recording.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <Button onClick={startTest} className="w-full md:w-auto">
+              Start the Assessment
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col md:flex-row">
+      {/* Left side - Question area */}
+      <div className="flex-1 p-8 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className={`mb-4 ${currentQuestion === 0 ? "bg-blue-100 text-blue-800 p-2 rounded inline-block" : ""}`}>
+            {currentQuestion === 0 ? "Warm-up question" : "Question " + currentQuestion}
+          </div>
+          
+          <h2 className="text-xl font-semibold mb-8">
+            Read the question and record your answer.
+          </h2>
+          
+          <p className="text-lg mb-8">
+            {questions[currentQuestion]}
+          </p>
+          
+          {currentQuestion === 1 && (
+            <div className="mb-8 border rounded-md overflow-hidden">
+              <img 
+                src="/placeholder.svg" 
+                alt="Description task" 
+                className="w-full object-cover h-80" 
+              />
+            </div>
+          )}
+        </div>
+      </div>
+      
+      {/* Right side - Recording area */}
+      <div className="flex-1 bg-gray-50 p-8 flex flex-col">
+        <div className="flex-1 flex flex-col items-center justify-center max-w-md mx-auto w-full">
+          {/* Video preview area */}
+          <div className="w-full aspect-video bg-gray-700 rounded-lg mb-8 relative overflow-hidden">
+            {/* This would be a real video preview in a production app */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Video className="h-16 w-16 text-gray-400" />
+            </div>
+            
+            {/* Timer */}
+            {(isRecording || timer < 30) && (
+              <div className="absolute top-4 right-4 bg-white bg-opacity-80 rounded-full h-16 w-16 flex items-center justify-center">
+                <div className="text-xl font-bold text-blue-600">
+                  {isRecording ? recordingTime : timer}
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {/* Action buttons */}
+          {!isRecording && timer === 30 ? (
+            <Button 
+              onClick={startRecording} 
+              size="lg" 
+              className="w-full md:w-auto"
+            >
+              Start recording
+            </Button>
+          ) : isRecording && recordingTime >= 30 ? (
+            <Button
+              onClick={handleSubmit}
+              size="lg"
+              className="w-full md:w-auto"
+            >
+              Submit
+            </Button>
+          ) : (
+            <div className="text-center text-gray-500 text-sm">
+              {isRecording ? 
+                `Recording will automatically end in ${60 - recordingTime} seconds` : 
+                `Recording will start in ${timer} seconds`}
+            </div>
+          )}
+          
+          <p className="text-center text-sm text-gray-500 mt-4">
+            {isRecording ? 
+              "The video recording will automatically submit at the end of the countdown." :
+              "The video recording will automatically start at the end of the countdown."}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

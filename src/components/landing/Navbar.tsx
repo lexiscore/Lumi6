@@ -46,13 +46,10 @@ export default function Navbar() {
             </a>
           </nav>
           
-          {/* Authentication buttons for desktop */}
+          {/* Authentication button for desktop */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4">
-            <Button variant="ghost" asChild>
-              <Link to="/admin-login">Admin Login</Link>
-            </Button>
             <Button asChild>
-              <Link to="/sign-up">Sign Up</Link>
+              <Link to="/admin-login">Admin Login</Link>
             </Button>
           </div>
         </div>
@@ -91,11 +88,8 @@ export default function Navbar() {
               Contact
             </a>
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
-              <Button variant="outline" className="w-full" asChild>
-                <Link to="/admin-login">Admin Login</Link>
-              </Button>
               <Button className="w-full" asChild>
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/admin-login">Admin Login</Link>
               </Button>
             </div>
           </nav>

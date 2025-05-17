@@ -15,7 +15,7 @@ export default function CTASection() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button size="lg" variant="secondary" className="bg-white text-blue-700" asChild>
-              <Link to="/sign-up">Create Free Account</Link>
+              <Link to="/admin-login">Admin Login</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700" asChild>
               <Link to="#features">Learn More</Link>

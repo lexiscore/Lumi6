@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import CreateSpeakingTest from "./pages/admin/CreateSpeakingTest";
+import CandidateTest from "./pages/candidate/CandidateTest";
 
 const App = () => {
   // Create a client instance inside the component
@@ -24,6 +26,8 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/create-test/speaking" element={<CreateSpeakingTest />} />
+            <Route path="/test/:testId" element={<CandidateTest />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
