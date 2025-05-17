@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -16,8 +17,12 @@ export default function Hero() {
                 Test your speaking and proficiency against international standards.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Button size="lg" className="px-6">Start Free Trial</Button>
-                <Button variant="outline" size="lg" className="px-6">Learn More</Button>
+                <Button size="lg" className="px-6" asChild>
+                  <Link to="/sign-up">Start Free Trial</Link>
+                </Button>
+                <Button variant="outline" size="lg" className="px-6" asChild>
+                  <Link to="#features">Learn More</Link>
+                </Button>
               </div>
             </div>
           </div>

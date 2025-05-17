@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <div className="flex items-center">
-              <span className="text-xl font-bold text-white">CEFR</span>
-              <span className="text-xl font-semibold text-blue-400">FluentHub</span>
+              <span className="text-xl font-bold text-white">Lexi</span>
+              <span className="text-xl font-semibold text-blue-400">Score</span>
             </div>
             <p className="text-sm leading-6">
               International language assessment and certification platform aligned with CEFR standards.
@@ -95,11 +95,11 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex gap-2">
                     <Mail className="h-5 w-5" />
-                    <a href="mailto:info@cefrfluenthub.com" className="text-sm text-gray-400 hover:text-white">info@cefrfluenthub.com</a>
+                    <a href="mailto:info@lexiscore.com" className="text-sm text-gray-400 hover:text-white">info@lexiscore.com</a>
                   </li>
                   <li className="flex gap-2">
                     <Globe className="h-5 w-5" />
-                    <a href="#" className="text-sm text-gray-400 hover:text-white">www.cefrfluenthub.com</a>
+                    <a href="#" className="text-sm text-gray-400 hover:text-white">www.lexiscore.com</a>
                   </li>
                 </ul>
               </div>
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-xs text-gray-400 xl:text-center">&copy; 2025 CEFR FluentHub. All rights reserved.</p>
+          <p className="text-xs text-gray-400 xl:text-center">&copy; 2025 LexiScore. All rights reserved.</p>
         </div>
       </div>
     </footer>

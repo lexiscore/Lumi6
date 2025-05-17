@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +13,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="flex items-center gap-1">
-              <span className="text-xl font-bold text-blue-600">CEFR</span>
-              <span className="text-xl font-semibold">FluentHub</span>
+              <span className="text-xl font-bold text-blue-600">Lexi</span>
+              <span className="text-xl font-semibold">Score</span>
             </a>
           </div>
           
@@ -47,11 +48,11 @@ export default function Navbar() {
           
           {/* Authentication buttons for desktop */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4">
-            <Button variant="ghost">
-              Sign In
+            <Button variant="ghost" asChild>
+              <Link to="/admin-login">Admin Login</Link>
             </Button>
-            <Button>
-              Sign Up
+            <Button asChild>
+              <Link to="/sign-up">Sign Up</Link>
             </Button>
           </div>
         </div>
@@ -90,11 +91,11 @@ export default function Navbar() {
               Contact
             </a>
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
-              <Button variant="outline" className="w-full">
-                Sign In
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/admin-login">Admin Login</Link>
               </Button>
-              <Button className="w-full">
-                Sign Up
+              <Button className="w-full" asChild>
+                <Link to="/sign-up">Sign Up</Link>
               </Button>
             </div>
           </nav>

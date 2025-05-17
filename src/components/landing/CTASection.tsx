@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function CTASection() {
   return (
@@ -10,14 +11,14 @@ export default function CTASection() {
             Ready to certify your language proficiency?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-            Join thousands of language learners and professionals who trust CEFR FluentHub for accurate, comprehensive language assessment.
+            Join thousands of language learners and professionals who trust LexiScore for accurate, comprehensive language assessment.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-700">
-              Create Free Account
+            <Button size="lg" variant="secondary" className="bg-white text-blue-700" asChild>
+              <Link to="/sign-up">Create Free Account</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
-              Learn More
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700" asChild>
+              <Link to="#features">Learn More</Link>
             </Button>
           </div>
         </div>
