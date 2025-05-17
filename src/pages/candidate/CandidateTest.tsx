@@ -51,6 +51,8 @@ export default function CandidateTest() {
 
   const startTest = () => {
     setShowInstructions(false);
+    // Automatically start preparation when test starts
+    startPreparation();
   };
 
   const startPreparation = () => {
@@ -94,6 +96,10 @@ export default function CandidateTest() {
     
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
+      // Automatically start preparation for the next question
+      setTimeout(() => {
+        startPreparation();
+      }, 500);
       toast({
         title: "Answer submitted",
         description: "Moving to the next question",
@@ -106,6 +112,13 @@ export default function CandidateTest() {
       // Would redirect to a completion page in a real implementation
     }
   };
+  
+  // Effect to auto start preparation if not showing instructions
+  useEffect(() => {
+    if (!showInstructions && !isPreparing && !isRecording && currentQuestion === 0) {
+      startPreparation();
+    }
+  }, [showInstructions, isPreparing, isRecording, currentQuestion]);
 
   if (!isLoggedIn) {
     return (
@@ -261,37 +274,21 @@ export default function CandidateTest() {
             )}
           </div>
           
-          {/* Action buttons */}
-          {!isPreparing && !isRecording ? (
-            <Button 
-              onClick={startPreparation} 
-              size="lg" 
-              className="w-full md:w-auto"
-            >
-              Start preparation (20s)
-            </Button>
-          ) : isRecording && recordingTime >= 30 ? (
-            <Button
-              onClick={handleSubmit}
-              size="lg"
-              className="w-full md:w-auto"
-            >
-              Submit
-            </Button>
-          ) : (
-            <div className="text-center text-gray-500 text-sm">
-              {isPreparing ? 
-                `Preparation time: ${timer} seconds remaining` : 
-                `Recording: ${recordingTime}/60 seconds`}
-            </div>
-          )}
+          {/* Status message - no button needed now */}
+          <div className="text-center text-gray-500 text-sm">
+            {isPreparing ? 
+              `Preparation time: ${timer} seconds remaining` : 
+              isRecording ? 
+                `Recording: ${recordingTime}/60 seconds` : 
+                "Moving to next question..."}
+          </div>
           
           <p className="text-center text-sm text-gray-500 mt-4">
             {isPreparing ? 
               "The recording will automatically start when preparation time ends." :
               isRecording ? 
                 "The recording will automatically end after 60 seconds." : 
-                "Take your time to understand the question before starting."}
+                "Please wait while we prepare the next question."}
           </p>
         </div>
       </div>
