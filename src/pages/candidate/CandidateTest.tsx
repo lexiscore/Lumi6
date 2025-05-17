@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,13 +8,13 @@ import { useParams } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { Mic, Video } from "lucide-react";
 
-// Mock questions for the speaking test
+// Updated questions with introduction first and remaining scenario-based questions
 const questions = [
-  "Please introduce yourself. How will this assessment be useful to you?",
-  "Describe what is happening in the picture. Describe what you can see. Give as much detail as you can.",
-  "Talk about your favorite hobby. Why do you enjoy it and how did you start?",
-  "Describe a recent trip you took. Where did you go and what did you do there?",
-  "Talk about a person who has influenced you. Who are they and how have they impacted your life?"
+  "Please introduce yourself.",
+  "Look at this picture of a busy city street. Describe what you can see and what might be happening.",
+  "Imagine you are planning a trip to another country. Describe where you would go and what activities you would do there.",
+  "Look at this picture of a family gathering. Describe the scene and talk about a similar experience you've had.",
+  "Discuss a challenging situation you've faced and how you dealt with it."
 ];
 
 export default function CandidateTest() {
@@ -26,7 +26,8 @@ export default function CandidateTest() {
   const [showInstructions, setShowInstructions] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
-  const [timer, setTimer] = useState(30);
+  const [isPreparing, setIsPreparing] = useState(false);
+  const [timer, setTimer] = useState(20); // 20 seconds preparation time
   const [recordingTime, setRecordingTime] = useState(0);
 
   const handleLogin = (e: React.FormEvent) => {
@@ -37,7 +38,7 @@ export default function CandidateTest() {
       setIsLoggedIn(true);
       toast({
         title: "Login successful",
-        description: "Welcome to the speaking assessment",
+        description: "Welcome to the English Speaking Test",
       });
     } else {
       toast({
@@ -52,15 +53,16 @@ export default function CandidateTest() {
     setShowInstructions(false);
   };
 
-  const startRecording = () => {
-    setIsRecording(true);
+  const startPreparation = () => {
+    setIsPreparing(true);
+    setTimer(20); // Reset to 20 seconds preparation time
     
-    // Countdown timer simulation
+    // Countdown timer for preparation
     const countdownInterval = setInterval(() => {
       setTimer((prev) => {
         if (prev <= 1) {
           clearInterval(countdownInterval);
-          simulateRecording();
+          startRecording();
           return 0;
         }
         return prev - 1;
@@ -68,11 +70,15 @@ export default function CandidateTest() {
     }, 1000);
   };
 
-  const simulateRecording = () => {
+  const startRecording = () => {
+    setIsPreparing(false);
+    setIsRecording(true);
+    setRecordingTime(0);
+    
     // Simulate recording time
     const recordingInterval = setInterval(() => {
       setRecordingTime((prev) => {
-        if (prev >= 60) {
+        if (prev >= 60) { // 60 seconds recording time
           clearInterval(recordingInterval);
           handleSubmit();
           return 0;
@@ -84,7 +90,6 @@ export default function CandidateTest() {
 
   const handleSubmit = () => {
     setIsRecording(false);
-    setTimer(30);
     setRecordingTime(0);
     
     if (currentQuestion < questions.length - 1) {
@@ -113,7 +118,7 @@ export default function CandidateTest() {
             </div>
           </div>
           
-          <h1 className="text-xl font-semibold text-center mb-6">Speaking Assessment</h1>
+          <h1 className="text-xl font-semibold text-center mb-6">English Speaking Test</h1>
           
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
@@ -188,11 +193,11 @@ export default function CandidateTest() {
               
               <ul className="list-disc space-y-4 pl-6">
                 <li>You'll be tested on your speaking skills.</li>
-                <li>The assessment includes five (5) questions. The first one is a warm-up, which will help you practice for the test.</li>
+                <li>The assessment includes five (5) questions. The first one is an introduction question.</li>
                 <li>For each of the questions, you will have:
                   <ul className="list-disc pl-8 mt-2 space-y-2">
-                    <li>a maximum of 40 seconds to read the question and prepare your answer. If you are ready to answer even before the 40 seconds is up, you can click on "Start recording".</li>
-                    <li>a maximum of 60 seconds to record your answer. Your answer will be automatically submitted after this time. You can also click on "Submit" after at least 30 seconds of recording.</li>
+                    <li>20 seconds to read the question and prepare your answer. The recording will start automatically when time is up.</li>
+                    <li>60 seconds to record your answer. Your answer will be automatically submitted after this time.</li>
                   </ul>
                 </li>
               </ul>
@@ -213,7 +218,7 @@ export default function CandidateTest() {
       <div className="flex-1 p-8 bg-white">
         <div className="max-w-2xl mx-auto">
           <div className={`mb-4 ${currentQuestion === 0 ? "bg-blue-100 text-blue-800 p-2 rounded inline-block" : ""}`}>
-            {currentQuestion === 0 ? "Warm-up question" : "Question " + currentQuestion}
+            {currentQuestion === 0 ? "Introduction question" : "Question " + currentQuestion}
           </div>
           
           <h2 className="text-xl font-semibold mb-8">
@@ -224,7 +229,7 @@ export default function CandidateTest() {
             {questions[currentQuestion]}
           </p>
           
-          {currentQuestion === 1 && (
+          {(currentQuestion === 1 || currentQuestion === 3) && (
             <div className="mb-8 border rounded-md overflow-hidden">
               <img 
                 src="/placeholder.svg" 
@@ -247,23 +252,23 @@ export default function CandidateTest() {
             </div>
             
             {/* Timer */}
-            {(isRecording || timer < 30) && (
+            {(isRecording || isPreparing) && (
               <div className="absolute top-4 right-4 bg-white bg-opacity-80 rounded-full h-16 w-16 flex items-center justify-center">
                 <div className="text-xl font-bold text-blue-600">
-                  {isRecording ? recordingTime : timer}
+                  {isPreparing ? timer : recordingTime}
                 </div>
               </div>
             )}
           </div>
           
           {/* Action buttons */}
-          {!isRecording && timer === 30 ? (
+          {!isPreparing && !isRecording ? (
             <Button 
-              onClick={startRecording} 
+              onClick={startPreparation} 
               size="lg" 
               className="w-full md:w-auto"
             >
-              Start recording
+              Start preparation (20s)
             </Button>
           ) : isRecording && recordingTime >= 30 ? (
             <Button
@@ -275,16 +280,18 @@ export default function CandidateTest() {
             </Button>
           ) : (
             <div className="text-center text-gray-500 text-sm">
-              {isRecording ? 
-                `Recording will automatically end in ${60 - recordingTime} seconds` : 
-                `Recording will start in ${timer} seconds`}
+              {isPreparing ? 
+                `Preparation time: ${timer} seconds remaining` : 
+                `Recording: ${recordingTime}/60 seconds`}
             </div>
           )}
           
           <p className="text-center text-sm text-gray-500 mt-4">
-            {isRecording ? 
-              "The video recording will automatically submit at the end of the countdown." :
-              "The video recording will automatically start at the end of the countdown."}
+            {isPreparing ? 
+              "The recording will automatically start when preparation time ends." :
+              isRecording ? 
+                "The recording will automatically end after 60 seconds." : 
+                "Take your time to understand the question before starting."}
           </p>
         </div>
       </div>

@@ -70,28 +70,12 @@ export default function AdminSidebar({ isOpen, setIsOpen }: AdminSidebarProps) {
             to="/admin-dashboard"
           />
           <SidebarItem 
-            icon={FileText} 
-            label="Tests" 
-            isActive={activeItem === "tests"}
-            isOpen={isOpen}
-            onClick={() => setActiveItem("tests")}
-            to="/admin/tests"
-          />
-          <SidebarItem 
-            icon={Book} 
-            label="Proficiency" 
-            isActive={activeItem === "proficiency"}
-            isOpen={isOpen}
-            onClick={() => setActiveItem("proficiency")}
-            to="/admin/proficiency"
-          />
-          <SidebarItem 
             icon={Mic} 
-            label="Speaking" 
+            label="Speaking Tests" 
             isActive={activeItem === "speaking"}
             isOpen={isOpen}
             onClick={() => setActiveItem("speaking")}
-            to="/admin/speaking"
+            to="/admin/create-test/speaking"
           />
           <SidebarItem 
             icon={Users} 

@@ -28,7 +28,6 @@ const App = () => {
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/admin/create-test/speaking" element={<CreateSpeakingTest />} />
             <Route path="/test/:testId" element={<CandidateTest />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

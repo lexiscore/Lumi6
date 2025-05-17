@@ -12,8 +12,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Copy, SendIcon } from "lucide-react";
 
 export default function CreateSpeakingTest() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [testName, setTestName] = useState("");
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Set default to false so sidebar is collapsed
   const [candidateEmail, setCandidateEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [testCreated, setTestCreated] = useState(false);
@@ -21,20 +20,20 @@ export default function CreateSpeakingTest() {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  // These would come from a database in a real implementation
-  const defaultQuestions = [
-    "Please introduce yourself. How will this assessment be useful to you?",
-    "Describe what is happening in the picture. Describe what you can see. Give as much detail as you can.",
-    "Talk about your favorite hobby. Why do you enjoy it and how did you start?",
-    "Describe a recent trip you took. Where did you go and what did you do there?",
-    "Talk about a person who has influenced you. Who are they and how have they impacted your life?"
+  // Updated questions format with picture/scenario based questions
+  const speakingQuestions = [
+    "Please introduce yourself.", // First question always an introduction
+    "Look at this picture of a busy city street. Describe what you can see and what might be happening.",
+    "Imagine you are planning a trip to another country. Describe where you would go and what activities you would do there.",
+    "Look at this picture of a family gathering. Describe the scene and talk about a similar experience you've had.",
+    "Discuss a challenging situation you've faced and how you dealt with it."
   ];
 
   const handleTestGeneration = () => {
-    if (!testName || !candidateEmail) {
+    if (!candidateEmail) {
       toast({
         title: "Missing information",
-        description: "Please fill in all required fields",
+        description: "Please enter the candidate email address",
         variant: "destructive",
       });
       return;
@@ -42,7 +41,7 @@ export default function CreateSpeakingTest() {
 
     setLoading(true);
 
-    // Generate a unique test ID (in a real app, this would be stored in a database)
+    // Generate a unique test ID
     const testId = `test-${Date.now().toString(36)}-${Math.random().toString(36).substring(2, 7)}`;
     
     // This would be an API call in a real implementation
@@ -78,13 +77,13 @@ export default function CreateSpeakingTest() {
     <div className="min-h-screen bg-gray-50 flex">
       <AdminSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
       
-      <div className="flex-1">
+      <div className="flex-1 ml-[var(--sidebar-width)]" style={{ marginLeft: sidebarOpen ? "var(--sidebar-width)" : "var(--sidebar-width-icon)" }}>
         <AdminHeader sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         
         <main className="p-6 sm:p-10">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Create Speaking Assessment</h1>
-            <p className="text-gray-600 mt-1">Generate a new speaking test for candidates</p>
+            <p className="text-gray-600 mt-1">Generate a new English Speaking Test for candidates</p>
           </div>
           
           <div className="max-w-3xl mx-auto">
@@ -93,7 +92,7 @@ export default function CreateSpeakingTest() {
                 <CardHeader>
                   <CardTitle>Test Details</CardTitle>
                   <CardDescription>
-                    Fill in the details to create a new speaking assessment
+                    Fill in the candidate's email to create a new speaking assessment
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -101,9 +100,9 @@ export default function CreateSpeakingTest() {
                     <Label htmlFor="testName">Test Name</Label>
                     <Input 
                       id="testName" 
-                      placeholder="e.g., English Speaking Assessment - Advanced Level"
-                      value={testName}
-                      onChange={(e) => setTestName(e.target.value)}
+                      value="English Speaking Test"
+                      readOnly
+                      className="bg-gray-50"
                     />
                   </div>
                   
@@ -119,19 +118,27 @@ export default function CreateSpeakingTest() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Questions (Automatically included)</Label>
+                    <Label>Questions Format</Label>
                     <div className="border rounded-md p-4 bg-gray-50">
+                      <p className="text-sm text-gray-600 mb-2">The assessment will include 5 questions:</p>
                       <ol className="list-decimal pl-4 space-y-3">
-                        {defaultQuestions.map((question, index) => (
-                          <li key={index} className="text-gray-800">
-                            {question}
-                          </li>
-                        ))}
+                        <li className="text-gray-800">
+                          Introduction question
+                        </li>
+                        <li className="text-gray-800">
+                          Picture description
+                        </li>
+                        <li className="text-gray-800">
+                          Scenario-based question
+                        </li>
+                        <li className="text-gray-800">
+                          Another picture description
+                        </li>
+                        <li className="text-gray-800">
+                          Personal experience question
+                        </li>
                       </ol>
                     </div>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Note: The first question is always a warm-up introduction question.
-                    </p>
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-end">
@@ -166,7 +173,7 @@ export default function CreateSpeakingTest() {
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <p className="text-sm text-gray-500">Test Name</p>
-                        <p className="font-medium">{testName}</p>
+                        <p className="font-medium">English Speaking Test</p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-500">Candidate</p>
