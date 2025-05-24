@@ -9,9 +9,9 @@ import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <Features />
         <HowItWorks />

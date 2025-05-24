@@ -4,25 +4,50 @@ import { Link } from "react-router-dom";
 
 export default function CTASection() {
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-indigo-700">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+    <div className="bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+      
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 relative">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to certify your language proficiency?
+          <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/30 mb-8 backdrop-blur-sm">
+            ✨ Join thousands of learners
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
+            Ready to certify your
+            <span className="block bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">language proficiency?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-            Join thousands of language learners and professionals who trust LexiScore for accurate, comprehensive language assessment.
+          <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-blue-100 font-light">
+            Join thousands of language learners and professionals who trust LexiScore for accurate, comprehensive language assessment with instant results.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-700" asChild>
-              <Link to="/admin-login">Admin Login</Link>
+          <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
+            <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" asChild>
+              <Link to="/admin-login">Get Started Now</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700" asChild>
+            <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300" asChild>
               <Link to="#features">Learn More</Link>
             </Button>
           </div>
+          
+          <div className="mt-16 flex items-center justify-center gap-12 text-blue-200 flex-wrap">
+            <div className="flex items-center gap-3">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="font-medium">20s Preparation Time</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="font-medium">Instant AI Analysis</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <span className="font-medium">Global Recognition</span>
+            </div>
+          </div>
         </div>
       </div>
+      
+      {/* Modern background elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-purple-400/20 to-indigo-600/20 rounded-full blur-3xl" />
     </div>
   );
 }
