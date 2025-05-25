@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -10,7 +9,7 @@ export default function Hero() {
           <div className="mx-auto max-w-4xl py-8 sm:py-12 lg:py-16">
             <div className="text-center">
               <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-blue-800 ring-1 ring-blue-200 mb-3 sm:mb-4">
-                🚀 AI-Powered Language Assessment for Business
+                🚀 B2B AI-Powered Language Assessment
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-800 bg-gradient-to-r from-slate-800 via-blue-700 to-slate-800 bg-clip-text text-transparent leading-tight">
                 Test Your Language
