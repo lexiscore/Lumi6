@@ -10,36 +10,36 @@ export default function CTASection() {
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 relative">
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/30 mb-8 backdrop-blur-sm">
-            ✨ Join thousands of learners
+            ✨ Trusted by enterprise teams
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
-            Ready to certify your
-            <span className="block bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">language proficiency?</span>
+            Ready to scale your
+            <span className="block bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">global workforce?</span>
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-blue-100 font-light">
-            Join thousands of language learners and professionals who trust LexiScore for accurate, comprehensive language assessment with instant results.
+            Join thousands of businesses and HR teams who trust LexiScore for accurate, scalable language assessment with enterprise-grade security and instant results.
           </p>
           <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
             <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" asChild>
-              <Link to="/admin-login">Get Started Now</Link>
+              <Link to="/admin-login">Start Enterprise Trial</Link>
             </Button>
             <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300" asChild>
-              <Link to="#features">Learn More</Link>
+              <Link to="#features">B2B Solutions</Link>
             </Button>
           </div>
           
           <div className="mt-16 flex items-center justify-center gap-12 text-blue-200 flex-wrap">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="font-medium">20s Preparation Time</span>
+              <span className="font-medium">Bulk Assessment</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-              <span className="font-medium">Instant AI Analysis</span>
+              <span className="font-medium">API Integration</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-              <span className="font-medium">Global Recognition</span>
+              <span className="font-medium">Enterprise Security</span>
             </div>
           </div>
         </div>

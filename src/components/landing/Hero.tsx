@@ -10,26 +10,26 @@ export default function Hero() {
           <div className="mx-auto max-w-4xl py-24 sm:py-32">
             <div className="text-center">
               <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 ring-1 ring-blue-200 mb-8">
-                🚀 AI-Powered Language Assessment
+                🚀 AI-Powered Language Assessment for Business
               </div>
               <h1 className="text-5xl font-bold tracking-tight text-slate-900 sm:text-7xl bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent leading-tight">
-                Master Your Language
+                Test Your Language
                 <span className="block text-blue-600">Proficiency</span>
               </h1>
               <p className="mt-8 text-xl leading-8 text-slate-600 max-w-2xl mx-auto font-light">
-                Get instant CEFR-based assessment with AI-powered speaking tests. 
-                Accurate, comprehensive, and internationally recognized certification for professionals worldwide.
+                Enterprise-grade CEFR-based assessment with AI-powered speaking tests. 
+                Scale your global workforce with accurate, comprehensive language certification for businesses worldwide.
               </p>
               <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
                 <Button size="lg" className="px-8 py-4 text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" asChild>
-                  <Link to="/sign-up">Start Free Assessment</Link>
+                  <Link to="/sign-up">Start Business Assessment</Link>
                 </Button>
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" asChild>
-                  <Link to="#features">Explore Features</Link>
+                  <Link to="#features">Enterprise Features</Link>
                 </Button>
               </div>
               
-              <div className="mt-16 flex items-center justify-center gap-8 text-sm text-slate-500">
+              <div className="mt-16 flex items-center justify-center gap-8 text-sm text-slate-500 flex-wrap">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Instant Results</span>
@@ -40,7 +40,11 @@ export default function Hero() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  <span>AI-Powered</span>
+                  <span>Enterprise Ready</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>B2B Solutions</span>
                 </div>
               </div>
             </div>
