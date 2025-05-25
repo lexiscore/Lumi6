@@ -1,28 +1,27 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-16 pb-8">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-8 pb-6">
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl py-12 sm:py-16 lg:py-20">
+          <div className="mx-auto max-w-4xl py-8 sm:py-12 lg:py-16">
             <div className="text-center">
-              <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-blue-700 ring-1 ring-blue-200 mb-4 sm:mb-6">
+              <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-blue-700 ring-1 ring-blue-200 mb-3 sm:mb-4">
                 🚀 AI-Powered Language Assessment for Business
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent leading-tight">
                 Test Your Language
                 <span className="block text-blue-600">Proficiency</span>
               </h1>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl leading-6 sm:leading-7 lg:leading-8 text-slate-600 max-w-2xl mx-auto font-light px-4">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg leading-5 sm:leading-6 lg:leading-7 text-slate-600 max-w-2xl mx-auto font-light px-4">
                 Enterprise-grade CEFR-based assessment with AI-powered speaking tests. 
                 Scale your global workforce with accurate, comprehensive language certification for businesses worldwide.
               </p>
-              <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4 lg:gap-6 flex-wrap px-4">
+              <div className="mt-4 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4 lg:gap-6 flex-wrap px-4">
                 <Button size="lg" className="px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" asChild>
-                  <Link to="/sign-up">Start Business Assessment</Link>
+                  <Link to="/sign-up">Start Your Trial</Link>
                 </Button>
                 <Button variant="outline" size="lg" className="px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" asChild>
                   <Link to="#features">Enterprise Features</Link>
