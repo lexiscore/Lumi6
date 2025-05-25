@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -8,14 +9,14 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl py-8 sm:py-12 lg:py-16">
             <div className="text-center">
-              <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-blue-700 ring-1 ring-blue-200 mb-3 sm:mb-4">
+              <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1.5 text-xs sm:text-sm font-medium text-blue-800 ring-1 ring-blue-200 mb-3 sm:mb-4">
                 🚀 AI-Powered Language Assessment for Business
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-800 bg-gradient-to-r from-slate-800 via-blue-700 to-slate-800 bg-clip-text text-transparent leading-tight">
                 Test Your Language
-                <span className="block text-blue-600">Proficiency</span>
+                <span className="block text-blue-700">Proficiency</span>
               </h1>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg leading-5 sm:leading-6 lg:leading-7 text-slate-600 max-w-2xl mx-auto font-light px-4">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg leading-5 sm:leading-6 lg:leading-7 text-slate-700 max-w-2xl mx-auto font-medium px-4">
                 Enterprise-grade CEFR-based assessment with AI-powered speaking tests. 
                 Scale your global workforce with accurate, comprehensive language certification for businesses worldwide.
               </p>
@@ -23,27 +24,27 @@ export default function Hero() {
                 <Button size="lg" className="px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" asChild>
                   <Link to="/sign-up">Start Your Trial</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" asChild>
+                <Button variant="outline" size="lg" className="px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold border-2 border-slate-400 text-slate-700 hover:border-blue-600 hover:text-blue-600 transition-all duration-300" asChild>
                   <Link to="#features">Enterprise Features</Link>
                 </Button>
               </div>
               
-              <div className="mt-8 sm:mt-12 flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 text-xs sm:text-sm text-slate-500 flex-wrap px-4">
+              <div className="mt-8 sm:mt-12 flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 text-xs sm:text-sm text-slate-600 flex-wrap px-4">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
-                  <span>Instant Results</span>
+                  <span className="font-medium">Instant Results</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full"></div>
-                  <span>CEFR Certified</span>
+                  <span className="font-medium">CEFR Certified</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full"></div>
-                  <span>Enterprise Ready</span>
+                  <span className="font-medium">Enterprise Ready</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full"></div>
-                  <span>B2B Solutions</span>
+                  <span className="font-medium">B2B Solutions</span>
                 </div>
               </div>
             </div>
