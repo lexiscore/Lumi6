@@ -81,7 +81,7 @@ export default function AdminDashboard() {
         <main className="p-6 sm:p-10">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-            <p className="text-gray-600 mt-1">Welcome to the LexiScore admin dashboard</p>
+            <p className="text-gray-600 mt-1">Welcome to the Lumi6 admin dashboard</p>
           </div>
           
           <div className="mt-6">

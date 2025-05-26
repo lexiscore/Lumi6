@@ -45,9 +45,13 @@ export default function AdminLogin() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
-          <div className="flex justify-center mb-2">
-            <span className="text-3xl font-bold text-blue-600">Lexi</span>
-            <span className="text-3xl font-semibold">Score</span>
+          <div className="flex justify-center items-center mb-2">
+            <img 
+              src="/lovable-uploads/6cc03eb9-5444-4785-9318-f149513e03c4.png" 
+              alt="Lumi6 Logo" 
+              className="w-12 h-12 mr-3"
+            />
+            <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Lumi6</span>
           </div>
           <h2 className="mt-2 text-2xl font-bold text-gray-900">Admin Login</h2>
           <p className="mt-2 text-sm text-gray-600">

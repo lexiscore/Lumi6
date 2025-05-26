@@ -8,8 +8,12 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <div className="flex items-center">
-              <span className="text-xl font-bold text-white">Lexi</span>
-              <span className="text-xl font-semibold text-blue-400">Score</span>
+              <img 
+                src="/lovable-uploads/6cc03eb9-5444-4785-9318-f149513e03c4.png" 
+                alt="Lumi6 Logo" 
+                className="w-8 h-8 mr-3"
+              />
+              <span className="text-xl font-bold text-white">Lumi6</span>
             </div>
             <p className="text-sm leading-6">
               International language assessment and certification platform aligned with CEFR standards.
@@ -95,11 +99,11 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex gap-2">
                     <Mail className="h-5 w-5" />
-                    <a href="mailto:info@lexiscore.com" className="text-sm text-gray-400 hover:text-white">info@lexiscore.com</a>
+                    <a href="mailto:lexiscorehq@gmail.com" className="text-sm text-gray-400 hover:text-white">lexiscorehq@gmail.com</a>
                   </li>
                   <li className="flex gap-2">
                     <Globe className="h-5 w-5" />
-                    <a href="#" className="text-sm text-gray-400 hover:text-white">www.lexiscore.com</a>
+                    <a href="#" className="text-sm text-gray-400 hover:text-white">www.lumi6.com</a>
                   </li>
                 </ul>
               </div>
@@ -107,7 +111,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-xs text-gray-400 xl:text-center">&copy; 2025 LexiScore. All rights reserved.</p>
+          <p className="text-xs text-gray-400 xl:text-center">&copy; 2025 Lumi6. All rights reserved.</p>
         </div>
       </div>
     </footer>

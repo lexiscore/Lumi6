@@ -12,11 +12,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-sm">L</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LexiScore</span>
+            <a href="#" className="flex items-center gap-3 group">
+              <img 
+                src="/lovable-uploads/6cc03eb9-5444-4785-9318-f149513e03c4.png" 
+                alt="Lumi6 Logo" 
+                className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Lumi6</span>
             </a>
           </div>
           
