@@ -23,7 +23,7 @@ export default function CTASection() {
             <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold bg-white text-orange-700 hover:bg-orange-50 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" asChild>
               <Link to="/admin-login">Start Enterprise Trial</Link>
             </Button>
-            <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300" asChild>
+            <Button size="lg" className="px-8 py-4 text-lg font-semibold bg-white/20 text-white border-2 border-white/50 hover:bg-white/30 backdrop-blur-sm transition-all duration-300" asChild>
               <Link to="#features">
                 <span className="font-bold text-white">B2B Solutions</span>
               </Link>

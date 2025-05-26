@@ -14,11 +14,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="flex items-center gap-4 group">
-              <img 
-                src="/lovable-uploads/6cc03eb9-5444-4785-9318-f149513e03c4.png" 
-                alt="Lumi6 Logo" 
-                className="w-12 h-12 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
-              />
+              <div className="bg-white rounded-lg p-2 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/6cc03eb9-5444-4785-9318-f149513e03c4.png" 
+                  alt="Lumi6 Logo" 
+                  className="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent">Lumi6</span>
             </a>
           </div>
