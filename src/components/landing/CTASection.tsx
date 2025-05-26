@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CTASection() {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-700 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
       
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 relative">
@@ -14,31 +14,33 @@ export default function CTASection() {
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
             Ready to scale your
-            <span className="block bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">global workforce?</span>
+            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">global workforce?</span>
           </h2>
-          <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-blue-100 font-light">
+          <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-orange-100 font-light">
             Join thousands of businesses and HR teams who trust Lumi6 for accurate, scalable language assessment with enterprise-grade security and instant results.
           </p>
           <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
-            <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" asChild>
+            <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold bg-white text-orange-700 hover:bg-orange-50 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" asChild>
               <Link to="/admin-login">Start Enterprise Trial</Link>
             </Button>
             <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300" asChild>
-              <Link to="#features">B2B Solutions</Link>
+              <Link to="#features">
+                <span className="font-bold text-white">B2B Solutions</span>
+              </Link>
             </Button>
           </div>
           
-          <div className="mt-16 flex items-center justify-center gap-12 text-blue-200 flex-wrap">
+          <div className="mt-16 flex items-center justify-center gap-12 text-orange-200 flex-wrap">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               <span className="font-medium">Bulk Assessment</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
               <span className="font-medium">API Integration</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
               <span className="font-medium">Enterprise Security</span>
             </div>
           </div>
@@ -46,8 +48,8 @@ export default function CTASection() {
       </div>
       
       {/* Modern background elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-purple-400/20 to-indigo-600/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-yellow-400/20 to-orange-600/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-pink-400/20 to-red-600/20 rounded-full blur-3xl" />
     </div>
   );
 }
