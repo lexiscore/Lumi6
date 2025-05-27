@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -15,37 +14,11 @@ export default function Navbar() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="flex items-center gap-4 group">
               <div className="bg-white rounded-lg p-2 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <svg 
-                  width="64" 
-                  height="64" 
-                  viewBox="0 0 300 100" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="group-hover:scale-110 transition-transform duration-300"
-                >
-                  <defs>
-                    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#007CF0"/>
-                      <stop offset="50%" stopColor="#7928CA"/>
-                      <stop offset="100%" stopColor="#FF0080"/>
-                    </linearGradient>
-                    <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#007CF0"/>
-                      <stop offset="25%" stopColor="#7928CA"/>
-                      <stop offset="50%" stopColor="#FF0080"/>
-                      <stop offset="75%" stopColor="#FF4D4D"/>
-                      <stop offset="100%" stopColor="#FFB400"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="0" y="20" width="60" height="60" rx="12" fill="url(#grad1)"/>
-                  <g transform="translate(12, 32) scale(0.6)" fill="white">
-                    <path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm0 46.5C14.3 46.5 5.5 37.7 5.5 27S14.3 7.5 25 7.5 44.5 16.3 44.5 27 35.7 46.5 25 46.5z"/>
-                    <path d="M10 35c5 2 10 3 15 3s10-1 15-3c-2-5-8-9-15-9s-13 4-15 9z"/>
-                  </g>
-                  <text x="70" y="65" fontFamily="'SF Pro Display', sans-serif" fontSize="40" fontWeight="500" fill="url(#grad2)">
-                    Lumi6
-                  </text>
-                </svg>
+                <img 
+                  src="/lovable-uploads/f4c6f163-6636-4514-aeb4-a5a68f70db19.png" 
+                  alt="Lumi6 Logo" 
+                  className="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </a>
           </div>
