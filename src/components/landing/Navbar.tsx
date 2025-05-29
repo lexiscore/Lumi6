@@ -14,20 +14,17 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="flex items-center gap-3 group">
-              <div className="relative bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-100/50">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-violet-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative bg-gradient-to-br from-emerald-50 to-cyan-50 rounded-xl p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-emerald-100/50">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-cyan-400/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src="/lovable-uploads/f4c6f163-6636-4514-aeb4-a5a68f70db19.png" 
                   alt="Lumi6 Logo" 
-                  className="w-10 h-10 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  className="w-10 h-10 relative z-10 group-hover:scale-110 transition-transform duration-300 filter brightness-110 saturate-150"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                   Lumi6
-                </span>
-                <span className="text-xs text-slate-500 font-medium -mt-1">
-                  Language Testing
                 </span>
               </div>
             </a>
