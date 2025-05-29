@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -10,15 +11,24 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#" className="flex items-center gap-4 group">
-              <div className="bg-white rounded-lg p-2 shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="relative bg-gradient-to-br from-blue-50 to-violet-50 rounded-xl p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-100/50">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-violet-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src="/lovable-uploads/f4c6f163-6636-4514-aeb4-a5a68f70db19.png" 
                   alt="Lumi6 Logo" 
-                  className="w-16 h-16 group-hover:scale-110 transition-transform duration-300"
+                  className="w-10 h-10 relative z-10 group-hover:scale-110 transition-transform duration-300"
                 />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                  Lumi6
+                </span>
+                <span className="text-xs text-slate-500 font-medium -mt-1">
+                  Language Testing
+                </span>
               </div>
             </a>
           </div>
