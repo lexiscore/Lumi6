@@ -51,41 +51,43 @@ export default function AdminLogin() {
               alt="Lumi6 Logo" 
               className="w-12 h-12 mr-3"
             />
-            <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Lumi6</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Lumi6</span>
           </div>
           <h2 className="mt-2 text-2xl font-bold text-gray-900">Admin Login</h2>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-base text-gray-600">
             Enter your credentials to access the admin dashboard
           </p>
         </div>
         
         <Card>
           <CardHeader>
-            <CardTitle>Enterprise Admin</CardTitle>
-            <CardDescription>
+            <CardTitle className="text-xl">Enterprise Admin</CardTitle>
+            <CardDescription className="text-base">
               Sign in to your account to manage language tests
             </CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="text-base">Email</Label>
                 <Input 
                   id="email" 
                   type="email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@company.com" 
+                  placeholder="admin@company.com"
+                  className="text-base"
                   required 
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password" className="text-base">Password</Label>
                 <Input 
                   id="password" 
                   type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  className="text-base"
                   required 
                 />
               </div>
@@ -93,15 +95,15 @@ export default function AdminLogin() {
             <CardFooter className="flex flex-col">
               <Button 
                 type="submit" 
-                className="w-full" 
+                className="w-full text-base" 
                 disabled={isLoading}
               >
                 {isLoading ? "Signing in..." : "Sign In"}
               </Button>
               <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600">
+                <p className="text-base text-gray-600">
                   Don't have an account?{" "}
-                  <Button variant="link" className="p-0" onClick={() => navigate("/admin-signup")}>
+                  <Button variant="link" className="p-0 text-base" onClick={() => navigate("/admin-signup")}>
                     Sign up
                   </Button>
                 </p>

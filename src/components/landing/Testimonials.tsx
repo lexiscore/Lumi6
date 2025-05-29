@@ -35,10 +35,10 @@ export default function Testimonials() {
           <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 mb-6">
             Testimonials
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
             Trusted by language learners worldwide
           </h2>
-          <p className="mt-6 text-xl leading-8 text-slate-600 font-light">
+          <p className="mt-6 text-xl leading-8 text-slate-600">
             See what our users have to say about their experience with LexiScore.
           </p>
         </div>
@@ -55,14 +55,14 @@ export default function Testimonials() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-slate-700 italic mb-8 text-lg leading-relaxed font-light">"{testimonial.text}"</p>
+                <p className="text-slate-700 italic mb-8 text-lg leading-relaxed">"{testimonial.text}"</p>
                 <div className="flex items-center">
                   <Avatar className="h-12 w-12 mr-4 ring-2 ring-blue-100">
                     <AvatarFallback className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold">{testimonial.avatar}</AvatarFallback>
                   </Avatar>
                   <div>
                     <div className="font-semibold text-slate-900 text-lg">{testimonial.author}</div>
-                    <div className="text-slate-600 font-light">{testimonial.role}</div>
+                    <div className="text-slate-600">{testimonial.role}</div>
                   </div>
                 </div>
               </CardContent>
