@@ -1,8 +1,8 @@
 
-export default function Logo({ className = "w-10 h-10", textClassName = "text-2xl" }: { className?: string; textClassName?: string }) {
+export default function Logo({ className = "w-12 h-12", textClassName = "text-2xl" }: { className?: string; textClassName?: string }) {
   return (
     <div className="flex items-center gap-3 group">
-      <div className={`relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-100/50 ${className}`}>
+      <div className={`relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-100/50 ${className}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div className="relative">
           <svg viewBox="0 0 32 32" fill="none" className="w-full h-full">

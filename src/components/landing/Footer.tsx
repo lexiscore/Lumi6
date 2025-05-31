@@ -1,4 +1,3 @@
-
 import { Globe, Mail } from 'lucide-react';
 import Logo from './Logo';
 
@@ -9,7 +8,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <div className="flex items-center">
-              <Logo className="w-10 h-10" textClassName="text-xl" />
+              <Logo className="w-12 h-12" textClassName="text-2xl" />
             </div>
             <p className="text-sm leading-6">
               International language assessment and certification platform aligned with CEFR standards.

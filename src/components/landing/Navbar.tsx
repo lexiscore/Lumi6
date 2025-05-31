@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="flex items-center">
-              <Logo />
+              <Logo className="w-14 h-14" textClassName="text-3xl" />
             </a>
           </div>
           
