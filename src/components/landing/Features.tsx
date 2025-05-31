@@ -56,10 +56,10 @@ export default function Features() {
           <div className="inline-flex items-center rounded-full bg-gradient-to-r from-orange-100 to-pink-100 px-4 py-2 text-sm font-semibold text-orange-700 ring-1 ring-orange-200 mb-6">
             Comprehensive Testing
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl bg-gradient-to-r from-slate-900 via-orange-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 via-orange-600 to-pink-600 bg-clip-text text-transparent">
             Everything you need for language assessment
           </h2>
-          <p className="mt-6 text-xl leading-8 text-slate-600 font-light">
+          <p className="mt-6 text-xl leading-8 text-slate-600">
             Our platform offers a complete suite of tools to accurately measure, certify, and improve your language skills based on the internationally-recognized CEFR framework.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function Features() {
                   <h3 className="mt-6 text-xl font-semibold text-slate-900 group-hover:text-orange-700 transition-colors duration-300">
                     {feature.name}
                   </h3>
-                  <p className="mt-4 text-slate-600 leading-7 font-light">{feature.description}</p>
+                  <p className="mt-4 text-base leading-7 text-slate-600">{feature.description}</p>
                 </div>
               </div>
             ))}

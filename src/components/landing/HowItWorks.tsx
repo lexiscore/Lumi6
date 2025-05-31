@@ -39,10 +39,10 @@ export default function HowItWorks() {
           <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 mb-6">
             Simple Process
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
             How LexiScore Works
           </h2>
-          <p className="mt-6 text-xl leading-8 text-slate-600 font-light">
+          <p className="mt-6 text-xl leading-8 text-slate-600">
             Our platform makes language assessment straightforward, accurate, and insightful with these simple steps.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function HowItWorks() {
                   </div>
                 </div>
                 <CardContent className="pt-6 pb-8 px-6">
-                  <p className="text-slate-600 leading-relaxed font-light">{step.description}</p>
+                  <p className="text-base leading-relaxed text-slate-600">{step.description}</p>
                 </CardContent>
                 
                 {/* Connection line for desktop */}
@@ -75,7 +75,7 @@ export default function HowItWorks() {
           <div className="mt-20 flex justify-center">
             <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 p-8 max-w-4xl border border-blue-200/50 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Common European Framework of Reference (CEFR)</h3>
-              <p className="text-slate-600 leading-relaxed mb-6 font-light">
+              <p className="text-base leading-relaxed mb-6 text-slate-600">
                 Our tests follow the internationally recognized CEFR scale, from A1 (beginner) to C2 (mastery), 
                 providing a clear and standardized way to measure language proficiency across all skills.
               </p>
