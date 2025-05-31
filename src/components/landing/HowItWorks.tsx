@@ -5,41 +5,41 @@ const steps = [
   {
     title: 'Select Your Test',
     description: 'Choose the language and specific test type you want to take from our comprehensive assessment options.',
-    color: 'from-emerald-500 to-lime-500',
+    color: 'from-blue-500 to-cyan-500',
     number: '1'
   },
   {
     title: 'Complete Assessment',
     description: 'Take the interactive AI-powered test that evaluates your speaking skills based on CEFR standards.',
-    color: 'from-lime-500 to-green-500',
+    color: 'from-cyan-500 to-blue-500',
     number: '2'
   },
   {
     title: 'Receive Results',
     description: 'Get a comprehensive breakdown of your performance with specific CEFR level indicators instantly.',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-blue-500 to-cyan-500',
     number: '3'
   },
   {
     title: 'Get Certified',
     description: 'Download your official CEFR-aligned digital certificate to share with employers or institutions.',
-    color: 'from-emerald-500 to-green-600',
+    color: 'from-cyan-500 to-blue-600',
     number: '4'
   }
 ];
 
 export default function HowItWorks() {
   return (
-    <div id="how-it-works" className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 py-24 sm:py-32 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-400/10 to-lime-600/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-lime-400/10 to-green-600/10 rounded-full blur-3xl" />
+    <div id="how-it-works" className="bg-gradient-to-br from-slate-50 via-white to-cyan-50 py-24 sm:py-32 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-cyan-600/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-cyan-400/10 to-blue-600/10 rounded-full blur-3xl" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-3xl lg:text-center">
-          <div className="inline-flex items-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-200 mb-6">
+          <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 mb-6">
             Simple Process
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-emerald-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
             How LexiScore Works
           </h2>
           <p className="mt-6 text-xl leading-8 text-slate-600">
@@ -73,7 +73,7 @@ export default function HowItWorks() {
           </div>
           
           <div className="mt-20 flex justify-center">
-            <div className="rounded-2xl bg-gradient-to-r from-emerald-50 to-lime-50 p-8 max-w-4xl border border-emerald-200/50 shadow-lg">
+            <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-8 max-w-4xl border border-blue-200/50 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Common European Framework of Reference (CEFR)</h3>
               <p className="text-base leading-relaxed mb-6 text-slate-600">
                 Our tests follow the internationally recognized CEFR scale, from A1 (beginner) to C2 (mastery), 
@@ -84,12 +84,12 @@ export default function HowItWorks() {
                   <div 
                     key={level} 
                     className={`rounded-xl p-4 font-bold text-center text-white bg-gradient-to-r transition-all duration-300 hover:scale-105 shadow-lg ${
-                      index === 0 ? 'from-emerald-400 to-emerald-500' :
-                      index === 1 ? 'from-emerald-500 to-emerald-600' :
-                      index === 2 ? 'from-lime-500 to-lime-600' :
-                      index === 3 ? 'from-green-500 to-green-600' :
-                      index === 4 ? 'from-emerald-600 to-green-700' :
-                      'from-green-600 to-green-700'
+                      index === 0 ? 'from-blue-400 to-blue-500' :
+                      index === 1 ? 'from-blue-500 to-blue-600' :
+                      index === 2 ? 'from-cyan-500 to-cyan-600' :
+                      index === 3 ? 'from-blue-500 to-cyan-600' :
+                      index === 4 ? 'from-blue-600 to-cyan-700' :
+                      'from-cyan-600 to-blue-700'
                     }`}
                   >
                     {level}

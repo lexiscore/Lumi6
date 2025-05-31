@@ -29,13 +29,13 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div className="bg-white py-24 sm:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-white to-lime-50/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-cyan-50/30" />
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-3xl lg:text-center">
-          <div className="inline-flex items-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-200 mb-6">
+          <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 mb-6">
             Testimonials
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-emerald-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
             Trusted by language learners worldwide
           </h2>
           <p className="mt-6 text-xl leading-8 text-slate-600">
@@ -46,7 +46,7 @@ export default function Testimonials() {
         <div className="mx-auto mt-20 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="group bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-lime-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-cyan-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardContent className="p-8 relative">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -57,8 +57,8 @@ export default function Testimonials() {
                 </div>
                 <p className="text-slate-700 italic mb-8 text-lg leading-relaxed">"{testimonial.text}"</p>
                 <div className="flex items-center">
-                  <Avatar className="h-12 w-12 mr-4 ring-2 ring-emerald-100">
-                    <AvatarFallback className="bg-gradient-to-r from-emerald-500 to-lime-500 text-white font-semibold">{testimonial.avatar}</AvatarFallback>
+                  <Avatar className="h-12 w-12 mr-4 ring-2 ring-blue-100">
+                    <AvatarFallback className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold">{testimonial.avatar}</AvatarFallback>
                   </Avatar>
                   <div>
                     <div className="font-semibold text-slate-900 text-lg">{testimonial.author}</div>
