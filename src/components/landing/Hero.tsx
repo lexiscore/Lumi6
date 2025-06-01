@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-screen flex items-center justify-center">
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-screen flex items-center justify-center pt-24">
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <div className="text-center">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-8">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
                 <span className="text-gray-900">Test Your Language</span>
                 <span className="block text-blue-600">Proficiency</span>
               </h1>
               
-              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-12 shadow-sm mt-4">
+              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-12 shadow-sm">
                 🚀 AI-Powered Language Assessment
               </div>
               
