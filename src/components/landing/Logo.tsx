@@ -1,5 +1,5 @@
 
-export default function Logo({ className = "w-12 h-12", textClassName = "text-2xl" }: { className?: string; textClassName?: string }) {
+export default function Logo({ className = "w-16 h-16", textClassName = "text-2xl" }: { className?: string; textClassName?: string }) {
   return (
     <div className="flex items-center gap-3 group">
       <div className={`relative bg-white/80 backdrop-blur-sm rounded-xl p-2 shadow-sm border border-gray-200/50 group-hover:shadow-md transition-all duration-300 ${className}`}>

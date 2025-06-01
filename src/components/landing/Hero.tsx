@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ export default function Hero() {
                 <span className="block text-blue-600">Proficiency</span>
               </h1>
               
-              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-8 shadow-sm">
+              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-12 shadow-sm mt-4">
                 🚀 AI-Powered Language Assessment
               </div>
               
