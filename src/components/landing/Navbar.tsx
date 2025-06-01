@@ -14,9 +14,9 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#" className="flex items-center">
-              <Logo className="w-14 h-14" textClassName="text-xl" />
-            </a>
+            <Link to="/" className="flex items-center">
+              <Logo className="w-12 h-12" textClassName="text-xl" />
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -67,6 +67,10 @@ export default function Navbar() {
               How It Works
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
             </a>
+            <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
+              CEFR Guide
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -95,6 +99,9 @@ export default function Navbar() {
             <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
               How It Works
             </a>
+            <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
+              CEFR Guide
+            </Link>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
               Contact
             </a>
