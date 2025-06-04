@@ -40,7 +40,7 @@ export default function TrialFormModal({ isOpen, onClose }: TrialFormModalProps)
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?embedded=true"
               width="100%"
-              height="600"
+              height="400"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
