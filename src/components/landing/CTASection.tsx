@@ -1,8 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function CTASection() {
+  const handleTrialClick = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?usp=header', '_blank');
+  };
+
   return (
     <div className="bg-blue-600 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 relative">
@@ -18,8 +21,8 @@ export default function CTASection() {
             Join thousands of businesses and HR teams who trust Lumi6 for accurate, scalable language assessment with enterprise-grade security and instant results.
           </p>
           <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
-            <Button size="lg" variant="secondary" className="px-10 py-5 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl" asChild>
-              <Link to="/admin-login">Start Enterprise Trial</Link>
+            <Button size="lg" variant="secondary" className="px-10 py-5 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl" onClick={handleTrialClick}>
+              Start Enterprise Trial
             </Button>
             <Button size="lg" className="px-10 py-5 text-lg font-semibold bg-white/20 text-white border-2 border-white/50 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 rounded-xl" asChild>
               <Link to="#features">

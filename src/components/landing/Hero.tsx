@@ -2,18 +2,22 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const handleTrialClick = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?usp=header', '_blank');
+  };
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-screen flex items-center justify-center pt-24">
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-screen flex items-center justify-center pt-32">
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <div className="text-center">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
                 <span className="text-gray-900">Test Your Language</span>
                 <span className="block text-blue-600">Proficiency</span>
               </h1>
               
-              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-12 shadow-sm">
+              <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-medium text-blue-700 mb-8 shadow-sm">
                 🚀 AI-Powered Language Assessment
               </div>
               
@@ -23,8 +27,8 @@ export default function Hero() {
               </p>
               
               <div className="flex items-center justify-center gap-6 flex-wrap px-4 mb-16">
-                <Button size="lg" className="px-10 py-5 text-lg font-semibold bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" asChild>
-                  <Link to="/sign-up">Start Your Trial</Link>
+                <Button size="lg" className="px-10 py-5 text-lg font-semibold bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" onClick={handleTrialClick}>
+                  Start Your Trial
                 </Button>
                 <Button variant="outline" size="lg" className="px-10 py-5 text-lg font-semibold border-2 border-blue-200 text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 rounded-xl" asChild>
                   <Link to="#features">

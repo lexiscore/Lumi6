@@ -9,6 +9,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
+  const handleTrialClick = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?usp=header', '_blank');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,8 +83,8 @@ export default function Navbar() {
           
           {/* Authentication button for desktop */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4">
-            <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold rounded-xl" asChild>
-              <Link to="/admin-login">Admin Login</Link>
+            <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold rounded-xl" onClick={handleTrialClick}>
+              Start Your Trial
             </Button>
           </div>
         </div>
@@ -106,8 +110,8 @@ export default function Navbar() {
               Contact
             </a>
             <div className="pt-4 border-t border-gray-200">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 shadow-lg font-semibold rounded-xl" asChild>
-                <Link to="/admin-login">Admin Login</Link>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 shadow-lg font-semibold rounded-xl" onClick={handleTrialClick}>
+                Start Your Trial
               </Button>
             </div>
           </nav>
