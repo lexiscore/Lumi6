@@ -1,7 +1,8 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { X, CheckCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface TrialFormModalProps {
   isOpen: boolean;
@@ -9,12 +10,34 @@ interface TrialFormModalProps {
 }
 
 export default function TrialFormModal({ isOpen, onClose }: TrialFormModalProps) {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Listen for form submission events from the iframe
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      // Google Forms sends a message when the form is submitted
+      if (event.origin === 'https://docs.google.com' && event.data && event.data.includes('formResponse')) {
+        setIsSubmitted(true);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
+  // Reset submission state when modal is closed
+  useEffect(() => {
+    if (!isOpen) {
+      setIsSubmitted(false);
+    }
+  }, [isOpen]);
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-4xl max-h-[90vh] bg-white border border-gray-200 shadow-xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-gray-900 text-center">
-            Start Your Enterprise Trial
+            {isSubmitted ? "Thank You!" : "Start Your Enterprise Trial"}
           </DialogTitle>
           <Button
             variant="ghost"
@@ -27,35 +50,55 @@ export default function TrialFormModal({ isOpen, onClose }: TrialFormModalProps)
         </DialogHeader>
         
         <div className="mt-6">
-          <div className="text-center mb-6">
-            <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-4 py-2 text-sm font-medium text-blue-700 mb-4">
-              🚀 Join thousands of businesses using Lumi6
+          {isSubmitted ? (
+            <div className="text-center py-12">
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Thanks for showing your interest in Lumi6
+              </h3>
+              <p className="text-lg text-gray-600 mb-8">
+                Our team will reach out to you shortly.
+              </p>
+              <Button 
+                onClick={onClose}
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
+              >
+                Close
+              </Button>
             </div>
-            <p className="text-gray-600">
-              Fill out the form below to get instant access to our enterprise-grade language assessment platform
-            </p>
-          </div>
+          ) : (
+            <>
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-4 py-2 text-sm font-medium text-blue-700 mb-4">
+                  🚀 Join thousands of businesses using Lumi6
+                </div>
+                <p className="text-gray-600">
+                  Fill out the form below to get instant access to our enterprise-grade language assessment platform
+                </p>
+              </div>
 
-          <div className="w-full">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?embedded=true"
-              width="100%"
-              height="400"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="rounded-lg border border-gray-200"
-            >
-              Loading…
-            </iframe>
-          </div>
+              <div className="w-full">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSendQKtE9ngg8AheBMQxdhUF9Teqes-OkxvjGG66d2cJ960Zw/viewform?embedded=true"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  className="rounded-lg border border-gray-200"
+                >
+                  Loading…
+                </iframe>
+              </div>
 
-          <div className="mt-4 text-center">
-            <p className="text-xs text-gray-500">
-              By submitting this form, you agree to our Terms of Service and Privacy Policy.
-              We'll contact you within 24 hours to set up your trial.
-            </p>
-          </div>
+              <div className="mt-4 text-center">
+                <p className="text-xs text-gray-500">
+                  By submitting this form, you agree to our Terms of Service and Privacy Policy.
+                  We'll contact you within 24 hours to set up your trial.
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </DialogContent>
     </Dialog>
