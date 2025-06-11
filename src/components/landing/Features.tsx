@@ -1,10 +1,14 @@
+
 import { 
   BookOpen, 
   Award, 
   Globe, 
   MessageSquare, 
   File, 
-  Presentation 
+  Presentation,
+  Brain,
+  Users,
+  Heart
 } from "lucide-react";
 
 const features = [
@@ -13,36 +17,63 @@ const features = [
     description: 'Meticulously designed tests that align with all CEFR levels from A1 to C2, ensuring internationally recognized standards and accuracy.',
     icon: BookOpen,
     color: 'text-blue-600',
+    category: 'language'
   },
   {
     name: 'AI-Powered Speaking Tests',
     description: 'Advanced AI technology evaluates speaking proficiency with human-like accuracy, providing detailed feedback on pronunciation and fluency.',
     icon: MessageSquare,
     color: 'text-blue-600',
+    category: 'language'
   },
   {
-    name: 'Instant Results',
-    description: 'Get comprehensive assessment results immediately after completing your test, with detailed breakdowns across all language skills.',
-    icon: File,
-    color: 'text-blue-600',
+    name: 'EQ/EI Leadership Assessment',
+    description: 'Comprehensive emotional intelligence evaluation using Daniel Goleman\'s framework for self-awareness, empathy, and social skills.',
+    icon: Brain,
+    color: 'text-purple-600',
+    category: 'ei'
   },
   {
     name: 'Multiple Languages',
     description: 'Test your proficiency in numerous languages including English, Spanish, French, German, Chinese, and many more worldwide.',
     icon: Globe,
     color: 'text-blue-600',
+    category: 'language'
+  },
+  {
+    name: 'Team Dynamics Evaluation',
+    description: 'Assess empathy, teamwork capabilities, and cross-cultural adaptability for role transitions and collaborative environments.',
+    icon: Users,
+    color: 'text-purple-600',
+    category: 'ei'
+  },
+  {
+    name: 'Instant Results',
+    description: 'Get comprehensive assessment results immediately after completing your test, with detailed breakdowns across all evaluation areas.',
+    icon: File,
+    color: 'text-green-600',
+    category: 'both'
   },
   {
     name: 'Official Certification',
-    description: 'Receive official CEFR-aligned digital certificates that can be shared with educational institutions and employers globally.',
+    description: 'Receive official CEFR-aligned and EI framework-based digital certificates that can be shared with institutions and employers.',
     icon: Award,
-    color: 'text-blue-600',
+    color: 'text-green-600',
+    category: 'both'
+  },
+  {
+    name: 'Stress & Impulse Control',
+    description: 'Evaluate emotional regulation, stress management, and impulse control capabilities for high-pressure work environments.',
+    icon: Heart,
+    color: 'text-purple-600',
+    category: 'ei'
   },
   {
     name: 'Progress Tracking',
-    description: 'Monitor your language learning journey with detailed analytics and personalized recommendations for continuous improvement.',
+    description: 'Monitor your language learning and emotional intelligence development with detailed analytics and personalized recommendations.',
     icon: Presentation,
-    color: 'text-blue-600',
+    color: 'text-green-600',
+    category: 'both'
   },
 ];
 
@@ -52,14 +83,14 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-3xl lg:text-center">
           <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-semibold text-blue-700 mb-8">
-            Comprehensive Testing
+            Comprehensive Assessment Platform
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight text-gray-900 mb-6">
             Everything you need for
-            <span className="block text-blue-600">language assessment</span>
+            <span className="block text-blue-600">workforce evaluation</span>
           </h2>
           <p className="text-xl leading-8 text-gray-600 max-w-2xl mx-auto">
-            Our platform offers a complete suite of tools to accurately measure, certify, and improve your language skills based on the internationally-recognized CEFR framework.
+            Our platform offers a complete suite of tools to accurately measure language proficiency and emotional intelligence based on internationally-recognized frameworks.
           </p>
         </div>
         <div className="mx-auto mt-20 max-w-6xl">

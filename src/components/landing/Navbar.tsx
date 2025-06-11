@@ -46,21 +46,21 @@ export default function Navbar() {
                 </button>
                 {isProductsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50" 
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50" 
                     onMouseEnter={() => setIsProductsOpen(true)} 
                     onMouseLeave={() => setIsProductsOpen(false)}
                   >
                     <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
                       <div className="font-medium">Language Assessment</div>
-                      <div className="text-sm text-gray-500">CEFR-based testing platform</div>
+                      <div className="text-sm text-gray-500">CEFR-based testing with AI speaking evaluation</div>
+                    </a>
+                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors">
+                      <div className="font-medium">EQ/EI Assessment</div>
+                      <div className="text-sm text-gray-500">Emotional intelligence for leadership & teamwork</div>
                     </a>
                     <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
                       <div className="font-medium">Enterprise Solutions</div>
-                      <div className="text-sm text-gray-500">Bulk testing & API integration</div>
-                    </a>
-                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
-                      <div className="font-medium">AI Speaking Tests</div>
-                      <div className="text-sm text-gray-500">Advanced voice evaluation</div>
+                      <div className="text-sm text-gray-500">Bulk testing, API integration & custom frameworks</div>
                     </a>
                   </div>
                 )}
@@ -74,7 +74,7 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
               <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
-                CEFR Guide
+                Assessment Guide
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
@@ -106,7 +106,7 @@ export default function Navbar() {
                 How It Works
               </a>
               <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
-                CEFR Guide
+                Assessment Guide
               </Link>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
                 Contact
