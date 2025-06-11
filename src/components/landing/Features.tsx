@@ -1,4 +1,3 @@
-
 import { 
   BookOpen, 
   Award, 
@@ -49,7 +48,7 @@ const features = [
 
 export default function Features() {
   return (
-    <div id="features" className="bg-white py-24 sm:py-32 relative overflow-hidden">
+    <div id="features" className="bg-stone-50 py-24 sm:py-32 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-3xl lg:text-center">
           <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-semibold text-blue-700 mb-8">
@@ -66,7 +65,7 @@ export default function Features() {
         <div className="mx-auto mt-20 max-w-6xl">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
             {features.map((feature, index) => (
-              <div key={feature.name} className="group relative p-8 bg-white rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+              <div key={feature.name} className="group relative p-8 bg-stone-25 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
                 <div className="relative">
                   <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 border border-blue-200 ${feature.color} group-hover:bg-blue-100 transition-colors duration-300`}>
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
