@@ -40,7 +40,7 @@ export default function HowItWorks() {
             Simple Process
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">
-            How LexiScore Works
+            How Lumi6 Works
           </h2>
           <p className="mt-6 text-xl leading-8 text-slate-600">
             Our platform makes language assessment straightforward, accurate, and insightful with these simple steps.
