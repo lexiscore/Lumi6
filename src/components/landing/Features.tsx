@@ -27,8 +27,8 @@ const features = [
     category: 'language'
   },
   {
-    name: 'EQ/EI Leadership Assessment',
-    description: 'Comprehensive emotional intelligence evaluation using Daniel Goleman\'s framework for self-awareness, empathy, and social skills.',
+    name: 'EQ Leadership Assessment',
+    description: 'Comprehensive EQ evaluation using Daniel Goleman\'s framework for self-awareness, empathy, and social skills.',
     icon: Brain,
     color: 'text-purple-600',
     category: 'ei'
@@ -56,7 +56,7 @@ const features = [
   },
   {
     name: 'Official Certification',
-    description: 'Receive official CEFR-aligned and EI framework-based digital certificates that can be shared with institutions and employers.',
+    description: 'Receive official CEFR-aligned and EQ framework-based digital certificates that can be shared with institutions and employers.',
     icon: Award,
     color: 'text-green-600',
     category: 'both'
@@ -70,7 +70,7 @@ const features = [
   },
   {
     name: 'Progress Tracking',
-    description: 'Monitor your language learning and emotional intelligence development with detailed analytics and personalized recommendations.',
+    description: 'Monitor your language learning and EQ development with detailed analytics and personalized recommendations.',
     icon: Presentation,
     color: 'text-green-600',
     category: 'both'
@@ -90,7 +90,7 @@ export default function Features() {
             <span className="block text-blue-600">workforce evaluation</span>
           </h2>
           <p className="text-xl leading-8 text-gray-600 max-w-2xl mx-auto">
-            Our platform offers a complete suite of tools to accurately measure language proficiency and emotional intelligence based on internationally-recognized frameworks.
+            Our platform offers a complete suite of tools to accurately measure language proficiency and EQ based on internationally-recognized frameworks.
           </p>
         </div>
         <div className="mx-auto mt-20 max-w-6xl">

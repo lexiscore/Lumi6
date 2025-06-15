@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative overflow-hidden bg-gradient-to-br from-stone-50 via-stone-25 to-blue-50/30 min-h-screen flex items-center justify-center pt-24 pb-8">
+      <div className="relative overflow-hidden bg-gradient-to-br from-stone-50 via-stone-25 to-blue-50/30 min-h-screen flex items-center justify-center pt-32 pb-8">
         <div className="relative z-10 w-full">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-6xl">
@@ -21,7 +20,7 @@ export default function Hero() {
                 {/* Main heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
                   <span className="text-gray-900">Test Language Proficiency</span>
-                  <span className="block text-blue-600">& Emotional Intelligence</span>
+                  <span className="block text-blue-600">& EQ</span>
                 </h1>
                 
                 {/* Badge */}
@@ -31,7 +30,7 @@ export default function Hero() {
                 
                 {/* Description */}
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium px-4 mb-6">
-                  Enterprise-grade assessments for language proficiency and emotional intelligence. 
+                  Enterprise-grade assessments for language proficiency and EQ. 
                   <span className="text-blue-600 font-semibold"> Scale your global workforce</span> with comprehensive evaluation tools.
                 </p>
                 
@@ -109,7 +108,7 @@ export default function Hero() {
                     <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                       <span className="text-xl">🧠</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Emotional Intelligence</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">EQ</h3>
                     <p className="text-gray-600 mb-4 text-sm leading-relaxed">Comprehensive EQ/EI evaluation for leadership, teamwork, and client interaction excellence.</p>
                     
                     {/* EI Framework Badges - more compact */}
