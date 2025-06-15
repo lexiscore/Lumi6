@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -60,6 +59,10 @@ export default function Navbar() {
                       <div className="font-medium">EQ Assessment</div>
                       <div className="text-sm text-gray-500">For leadership, learning, talent and org development</div>
                     </a>
+                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors">
+                      <div className="font-medium">Custom Assessments</div>
+                      <div className="text-sm text-gray-500">Custom tests, frameworks, API integration, bulk testing</div>
+                    </a>
                   </div>
                 )}
               </div>
@@ -80,10 +83,6 @@ export default function Navbar() {
                     onMouseEnter={() => setIsSolutionsOpen(true)} 
                     onMouseLeave={() => setIsSolutionsOpen(false)}
                   >
-                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
-                      <div className="font-medium">Enterprise Solutions</div>
-                      <div className="text-sm text-gray-500">Custom tests, frameworks, API integration, bulk testing</div>
-                    </a>
                   </div>
                 )}
               </div>
