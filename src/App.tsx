@@ -12,6 +12,9 @@ import AdminDashboard from "./pages/AdminDashboard";
 import CreateSpeakingTest from "./pages/admin/CreateSpeakingTest";
 import CandidateTest from "./pages/candidate/CandidateTest";
 import CEFRGuide from "./pages/CEFRGuide";
+import LanguageAssessment from "./pages/LanguageAssessment";
+import EQAssessment from "./pages/EQAssessment";
+import CustomAssessments from "./pages/CustomAssessments";
 
 const App = () => {
   // Create a client instance inside the component
@@ -30,6 +33,9 @@ const App = () => {
             <Route path="/admin/create-test/speaking" element={<CreateSpeakingTest />} />
             <Route path="/test/:testId" element={<CandidateTest />} />
             <Route path="/cefr-guide" element={<CEFRGuide />} />
+            <Route path="/language-assessment" element={<LanguageAssessment />} />
+            <Route path="/eq-assessment" element={<EQAssessment />} />
+            <Route path="/custom-assessments" element={<CustomAssessments />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
