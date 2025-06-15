@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -8,6 +9,7 @@ import TrialFormModal from "./TrialFormModal";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   const handleTrialClick = () => {
@@ -40,7 +42,7 @@ export default function Navbar() {
                   onMouseEnter={() => setIsProductsOpen(true)} 
                   onMouseLeave={() => setIsProductsOpen(false)}
                 >
-                  Products & Solutions
+                  Products
                   <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
@@ -55,16 +57,37 @@ export default function Navbar() {
                       <div className="text-sm text-gray-500">CEFR-based testing with AI speaking evaluation</div>
                     </a>
                     <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors">
-                      <div className="font-medium">EQ/EI Assessment</div>
-                      <div className="text-sm text-gray-500">Emotional intelligence for leadership & teamwork</div>
-                    </a>
-                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
-                      <div className="font-medium">Enterprise Solutions</div>
-                      <div className="text-sm text-gray-500">Bulk testing, API integration & custom frameworks</div>
+                      <div className="font-medium">EQ Assessment</div>
+                      <div className="text-sm text-gray-500">For leadership, learning, talent and org development</div>
                     </a>
                   </div>
                 )}
               </div>
+              
+              <div className="relative group">
+                <button 
+                  className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
+                  onMouseEnter={() => setIsSolutionsOpen(true)} 
+                  onMouseLeave={() => setIsSolutionsOpen(false)}
+                >
+                  Solutions
+                  <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                </button>
+                {isSolutionsOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50" 
+                    onMouseEnter={() => setIsSolutionsOpen(true)} 
+                    onMouseLeave={() => setIsSolutionsOpen(false)}
+                  >
+                    <a href="#features" className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">
+                      <div className="font-medium">Enterprise Solutions</div>
+                      <div className="text-sm text-gray-500">Custom tests, frameworks, API integration, bulk testing</div>
+                    </a>
+                  </div>
+                )}
+              </div>
+              
               <a href="#features" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 Features
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -97,7 +120,10 @@ export default function Navbar() {
           <div className="md:hidden bg-white border-t border-gray-200 p-6 animate-fade-in shadow-lg">
             <nav className="flex flex-col gap-6">
               <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
-                Products & Solutions
+                Products
+              </a>
+              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
+                Solutions
               </a>
               <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg" onClick={() => setIsMenuOpen(false)}>
                 Features
