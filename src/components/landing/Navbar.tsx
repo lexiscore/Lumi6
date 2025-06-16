@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,10 +11,50 @@ export default function Navbar() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  
+  const productsTimeoutRef = useRef<NodeJS.Timeout>();
+  const solutionsTimeoutRef = useRef<NodeJS.Timeout>();
 
   const handleTrialClick = () => {
     setIsTrialModalOpen(true);
   };
+
+  const handleProductsEnter = () => {
+    if (productsTimeoutRef.current) {
+      clearTimeout(productsTimeoutRef.current);
+    }
+    setIsProductsOpen(true);
+  };
+
+  const handleProductsLeave = () => {
+    productsTimeoutRef.current = setTimeout(() => {
+      setIsProductsOpen(false);
+    }, 150);
+  };
+
+  const handleSolutionsEnter = () => {
+    if (solutionsTimeoutRef.current) {
+      clearTimeout(solutionsTimeoutRef.current);
+    }
+    setIsSolutionsOpen(true);
+  };
+
+  const handleSolutionsLeave = () => {
+    solutionsTimeoutRef.current = setTimeout(() => {
+      setIsSolutionsOpen(false);
+    }, 150);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (productsTimeoutRef.current) {
+        clearTimeout(productsTimeoutRef.current);
+      }
+      if (solutionsTimeoutRef.current) {
+        clearTimeout(solutionsTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -39,8 +79,8 @@ export default function Navbar() {
               <div className="relative group">
                 <button 
                   className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
-                  onMouseEnter={() => setIsProductsOpen(true)} 
-                  onMouseLeave={() => setIsProductsOpen(false)}
+                  onMouseEnter={handleProductsEnter}
+                  onMouseLeave={handleProductsLeave}
                 >
                   Products
                   <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
@@ -48,14 +88,15 @@ export default function Navbar() {
                 </button>
                 {isProductsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
-                    onMouseEnter={() => setIsProductsOpen(true)} 
-                    onMouseLeave={() => setIsProductsOpen(false)}
+                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
+                    onMouseEnter={handleProductsEnter}
+                    onMouseLeave={handleProductsLeave}
                   >
                     <div className="px-2">
                       <Link 
                         to="/language-assessment" 
                         className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg"
+                        onClick={() => setIsProductsOpen(false)}
                       >
                         <div className="font-medium flex items-center gap-2">
                           🧩 Language Assessment
@@ -66,6 +107,7 @@ export default function Navbar() {
                       <Link 
                         to="/eq-assessment" 
                         className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
+                        onClick={() => setIsProductsOpen(false)}
                       >
                         <div className="font-medium flex items-center gap-2">
                           ❤️ EQ Assessment
@@ -76,6 +118,7 @@ export default function Navbar() {
                       <Link 
                         to="/custom-assessments" 
                         className="block px-4 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg"
+                        onClick={() => setIsProductsOpen(false)}
                       >
                         <div className="font-medium flex items-center gap-2">
                           ⚙️ Custom Assessments
@@ -90,8 +133,8 @@ export default function Navbar() {
               <div className="relative group">
                 <button 
                   className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
-                  onMouseEnter={() => setIsSolutionsOpen(true)} 
-                  onMouseLeave={() => setIsSolutionsOpen(false)}
+                  onMouseEnter={handleSolutionsEnter}
+                  onMouseLeave={handleSolutionsLeave}
                 >
                   Solutions
                   <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
@@ -99,9 +142,9 @@ export default function Navbar() {
                 </button>
                 {isSolutionsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50" 
-                    onMouseEnter={() => setIsSolutionsOpen(true)} 
-                    onMouseLeave={() => setIsSolutionsOpen(false)}
+                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
+                    onMouseEnter={handleSolutionsEnter}
+                    onMouseLeave={handleSolutionsLeave}
                   >
                     <div className="px-2">
                       <a href="#solutions" className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
