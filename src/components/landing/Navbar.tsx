@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -81,6 +80,7 @@ export default function Navbar() {
                   className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
                   onMouseEnter={handleProductsEnter}
                   onMouseLeave={handleProductsLeave}
+                  onClick={() => setIsProductsOpen(!isProductsOpen)}
                 >
                   Products
                   <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </button>
                 {isProductsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
+                    className="absolute top-full left-0 mt-0 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
                     onMouseEnter={handleProductsEnter}
                     onMouseLeave={handleProductsLeave}
                   >
@@ -135,6 +135,7 @@ export default function Navbar() {
                   className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
                   onMouseEnter={handleSolutionsEnter}
                   onMouseLeave={handleSolutionsLeave}
+                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                 >
                   Solutions
                   <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
@@ -142,15 +143,92 @@ export default function Navbar() {
                 </button>
                 {isSolutionsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
+                    className="absolute top-full left-0 mt-0 w-[600px] bg-white rounded-xl shadow-xl border border-gray-200 py-6 z-50 animate-fade-in" 
                     onMouseEnter={handleSolutionsEnter}
                     onMouseLeave={handleSolutionsLeave}
                   >
-                    <div className="px-2">
-                      <a href="#solutions" className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
-                        <div className="font-medium">Coming Soon</div>
-                        <div className="text-sm text-gray-500">More solutions in development</div>
-                      </a>
+                    <div className="grid grid-cols-2 gap-8 px-6">
+                      {/* By Department */}
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                          🏢 By Department
+                        </h3>
+                        <div className="space-y-2">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">Talent Acquisition</div>
+                            <div className="text-xs text-gray-500">Screen candidates with language & EQ tests</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">Learning & Development</div>
+                            <div className="text-xs text-gray-500">Track skill progression and training outcomes</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">DE&I</div>
+                            <div className="text-xs text-gray-500">Reduce bias in hiring with standardized assessments</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">Internal Communication</div>
+                            <div className="text-xs text-gray-500">Enhance team collaboration and understanding</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">Customer Experience</div>
+                            <div className="text-xs text-gray-500">Ensure service excellence with EQ assessments</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">Sales Excellence</div>
+                            <div className="text-xs text-gray-500">Build empathetic, persuasive sales teams</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                            <div className="font-medium">People Strategy</div>
+                            <div className="text-xs text-gray-500">Data-driven workforce planning and development</div>
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* By Industry */}
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                          🏭 By Industry
+                        </h3>
+                        <div className="space-y-2">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">BPO/ITES</div>
+                            <div className="text-xs text-gray-500">Global communication & client interaction skills</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Retail</div>
+                            <div className="text-xs text-gray-500">Customer service excellence and team leadership</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Hospitality</div>
+                            <div className="text-xs text-gray-500">Multilingual service and emotional intelligence</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Education</div>
+                            <div className="text-xs text-gray-500">Teacher assessment and student placement tests</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Healthcare</div>
+                            <div className="text-xs text-gray-500">Patient communication and empathy evaluation</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Banking & Finance</div>
+                            <div className="text-xs text-gray-500">Client advisory and regulatory compliance</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">Government</div>
+                            <div className="text-xs text-gray-500">Public service and multilingual communication</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">RCM</div>
+                            <div className="text-xs text-gray-500">Revenue cycle management and client relations</div>
+                          </a>
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                            <div className="font-medium">NGOs & Social Sector</div>
+                            <div className="text-xs text-gray-500">Community engagement and impact assessment</div>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}

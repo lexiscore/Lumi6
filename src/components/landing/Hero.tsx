@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -19,8 +20,8 @@ export default function Hero() {
               <div className="text-center">
                 {/* Main heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
-                  <span className="text-gray-900">Test Language Proficiency</span>
-                  <span className="block text-blue-600">& EQ</span>
+                  <span className="text-gray-900">AI-Powered Assessments for</span>
+                  <span className="block text-blue-600">Language & Emotional Intelligence</span>
                 </h1>
                 
                 {/* Badge */}
