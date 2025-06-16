@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -88,7 +89,7 @@ export default function Navbar() {
                 </button>
                 {isProductsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-0 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
+                    className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-4 z-50 animate-fade-in" 
                     onMouseEnter={handleProductsEnter}
                     onMouseLeave={handleProductsLeave}
                   >
@@ -143,7 +144,7 @@ export default function Navbar() {
                 </button>
                 {isSolutionsOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-0 w-[600px] bg-white rounded-xl shadow-xl border border-gray-200 py-6 z-50 animate-fade-in" 
+                    className="absolute top-full left-0 mt-1 w-[650px] bg-white rounded-xl shadow-xl border border-gray-200 py-6 z-50 animate-fade-in" 
                     onMouseEnter={handleSolutionsEnter}
                     onMouseLeave={handleSolutionsLeave}
                   >
@@ -154,33 +155,33 @@ export default function Navbar() {
                           🏢 By Department
                         </h3>
                         <div className="space-y-2">
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Talent Acquisition</div>
-                            <div className="text-xs text-gray-500">Screen candidates with language & EQ tests</div>
+                            <div className="text-xs text-gray-500">Screen candidates with language proficiency & EQ tests for global hiring. Reduce time-to-hire with automated assessments and ensure cultural fit through emotional intelligence evaluation.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Learning & Development</div>
-                            <div className="text-xs text-gray-500">Track skill progression and training outcomes</div>
+                            <div className="text-xs text-gray-500">Track skill progression, identify training needs, and measure learning outcomes. Use pre/post assessments to validate training effectiveness and create personalized development paths.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">DE&I</div>
-                            <div className="text-xs text-gray-500">Reduce bias in hiring with standardized assessments</div>
+                            <div className="text-xs text-gray-500">Eliminate bias in hiring through standardized assessments. Ensure fair evaluation regardless of background and promote inclusive hiring practices with objective language & EQ measurements.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Internal Communication</div>
-                            <div className="text-xs text-gray-500">Enhance team collaboration and understanding</div>
+                            <div className="text-xs text-gray-500">Enhance team collaboration and cross-cultural understanding. Assess communication effectiveness and build stronger internal relationships through EQ development programs.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Customer Experience</div>
-                            <div className="text-xs text-gray-500">Ensure service excellence with EQ assessments</div>
+                            <div className="text-xs text-gray-500">Ensure service excellence through EQ assessments for customer-facing roles. Improve client satisfaction by hiring emotionally intelligent staff who can handle diverse customer needs.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Sales Excellence</div>
-                            <div className="text-xs text-gray-500">Build empathetic, persuasive sales teams</div>
+                            <div className="text-xs text-gray-500">Build empathetic, persuasive sales teams through EQ evaluation. Assess communication skills for client presentations and develop high-performing sales professionals.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">People Strategy</div>
-                            <div className="text-xs text-gray-500">Data-driven workforce planning and development</div>
+                            <div className="text-xs text-gray-500">Make data-driven workforce planning decisions. Use assessment insights for succession planning, team composition, and strategic talent development initiatives.</div>
                           </a>
                         </div>
                       </div>
@@ -191,41 +192,37 @@ export default function Navbar() {
                           🏭 By Industry
                         </h3>
                         <div className="space-y-2">
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">BPO/ITES</div>
-                            <div className="text-xs text-gray-500">Global communication & client interaction skills</div>
+                            <div className="text-xs text-gray-500">Assess global communication skills for international clients. Evaluate language proficiency for voice & non-voice processes, ensure quality service delivery across time zones.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Retail</div>
-                            <div className="text-xs text-gray-500">Customer service excellence and team leadership</div>
+                            <div className="text-xs text-gray-500">Evaluate customer service skills and multilingual capabilities for diverse customer bases. Assess EQ for sales roles and leadership positions in retail management.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Hospitality</div>
-                            <div className="text-xs text-gray-500">Multilingual service and emotional intelligence</div>
+                            <div className="text-xs text-gray-500">Test multilingual service capabilities and cultural sensitivity. Evaluate emotional intelligence for guest relations and assess communication skills for international hospitality standards.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Education</div>
-                            <div className="text-xs text-gray-500">Teacher assessment and student placement tests</div>
+                            <div className="text-xs text-gray-500">Assess teacher communication effectiveness and student placement accuracy. Evaluate language proficiency for international programs and EQ for educational leadership roles.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Healthcare</div>
-                            <div className="text-xs text-gray-500">Patient communication and empathy evaluation</div>
+                            <div className="text-xs text-gray-500">Evaluate patient communication skills and empathy levels for healthcare professionals. Assess multilingual capabilities for diverse patient populations and cultural competency.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Banking & Finance</div>
-                            <div className="text-xs text-gray-500">Client advisory and regulatory compliance</div>
+                            <div className="text-xs text-gray-500">Test client advisory communication skills and regulatory compliance understanding. Evaluate EQ for relationship management and assess language skills for international banking.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">Government</div>
-                            <div className="text-xs text-gray-500">Public service and multilingual communication</div>
+                            <div className="text-xs text-gray-500">Assess public service communication effectiveness and multilingual capabilities for citizen services. Evaluate cultural competency for diverse community engagement.</div>
                           </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
+                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg" onClick={() => setIsSolutionsOpen(false)}>
                             <div className="font-medium">RCM</div>
-                            <div className="text-xs text-gray-500">Revenue cycle management and client relations</div>
-                          </a>
-                          <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors rounded-lg">
-                            <div className="font-medium">NGOs & Social Sector</div>
-                            <div className="text-xs text-gray-500">Community engagement and impact assessment</div>
+                            <div className="text-xs text-gray-500">Evaluate communication skills for revenue cycle management processes. Assess client interaction capabilities and problem-solving communication for financial operations.</div>
                           </a>
                         </div>
                       </div>
