@@ -31,6 +31,18 @@ export default function MobileMenu({ isOpen, onClose, onTrialClick }: MobileMenu
             Custom Assessments
           </Link>
         </div>
+
+        <div className="space-y-2">
+          <div className="font-medium text-gray-900 mb-2">Solutions</div>
+          <div className="pl-4 text-gray-700 space-y-1">
+            <div className="text-sm font-medium">Talent Acquisition</div>
+            <div className="text-sm font-medium">Learning & Development</div>
+            <div className="text-sm font-medium">DE&I</div>
+            <div className="text-sm font-medium">Internal Communication</div>
+            <div className="text-sm font-medium">Customer Success</div>
+            <div className="text-sm font-medium">People Strategy</div>
+          </div>
+        </div>
         
         <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
           Features
