@@ -15,6 +15,7 @@ import CEFRGuide from "./pages/CEFRGuide";
 import LanguageAssessment from "./pages/LanguageAssessment";
 import EQAssessment from "./pages/EQAssessment";
 import CustomAssessments from "./pages/CustomAssessments";
+import WhyEQTest from "./pages/WhyEQTest";
 
 const App = () => {
   // Create a client instance inside the component
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/language-assessment" element={<LanguageAssessment />} />
             <Route path="/eq-assessment" element={<EQAssessment />} />
             <Route path="/custom-assessments" element={<CustomAssessments />} />
+            <Route path="/why-eq-test" element={<WhyEQTest />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

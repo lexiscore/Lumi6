@@ -44,14 +44,14 @@ export default function MobileMenu({ isOpen, onClose, onTrialClick }: MobileMenu
           </div>
         </div>
         
-        <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
-          Features
-        </a>
         <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
           How It Works
         </a>
         <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
-          Assessment Guide
+          CEFR Guide
+        </Link>
+        <Link to="/why-eq-test" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
+          Why EQ Test
         </Link>
         <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={onClose}>
           Contact

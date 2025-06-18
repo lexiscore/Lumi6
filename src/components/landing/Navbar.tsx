@@ -42,16 +42,16 @@ export default function Navbar() {
               <ProductsDropdown isOpen={isProductsOpen} setIsOpen={setIsProductsOpen} />
               <SolutionsDropdown isOpen={isSolutionsOpen} setIsOpen={setIsSolutionsOpen} />
               
-              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
-                Features
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
               <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 How It Works
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
               <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
-                Assessment Guide
+                CEFR Guide
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link to="/why-eq-test" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
+                Why EQ Test
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
