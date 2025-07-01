@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative overflow-hidden bg-gradient-to-br from-stone-50 via-stone-25 to-blue-50/30 min-h-screen flex items-center justify-center pt-32 pb-8">
+      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex items-center justify-center pt-32 pb-8">
         <div className="relative z-10 w-full">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-6xl">
@@ -21,28 +21,28 @@ export default function Hero() {
                 {/* Main heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
                   <span className="text-gray-900">AI-Powered Assessments for</span>
-                  <span className="block text-blue-600">Emotional Intelligence & Language</span>
+                  <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Emotional Intelligence & Language</span>
                 </h1>
                 
                 {/* Badge */}
-                <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-2 text-sm font-medium text-blue-700 mb-4 shadow-sm">
+                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 px-6 py-2 text-sm font-medium text-purple-700 mb-4 shadow-sm">
                   🚀 AI-Powered Assessment Platform
                 </div>
                 
                 {/* Description */}
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium px-4 mb-6">
                   Enterprise-grade assessments for emotional intelligence and language proficiency. 
-                  <span className="text-blue-600 font-semibold"> Scale your global workforce</span> with comprehensive evaluation tools.
+                  <span className="text-purple-600 font-semibold"> Scale your global workforce</span> with comprehensive evaluation tools.
                 </p>
                 
                 {/* Buttons */}
                 <div className="flex items-center justify-center gap-4 flex-wrap px-4 mb-6">
-                  <Button size="lg" className="px-8 py-4 text-base font-semibold bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" onClick={handleTrialClick}>
+                  <Button size="lg" className="px-8 py-4 text-base font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl" onClick={handleTrialClick}>
                     Start Your Trial
                   </Button>
-                  <Button variant="outline" size="lg" className="px-8 py-4 text-base font-semibold border-2 border-blue-200 text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 rounded-xl" asChild>
+                  <Button variant="outline" size="lg" className="px-8 py-4 text-base font-semibold border-2 border-purple-200 text-purple-700 hover:border-purple-300 hover:bg-purple-50 transition-all duration-300 rounded-xl" asChild>
                     <Link to="#features">
-                      <span className="text-blue-600 font-bold">
+                      <span className="text-purple-600 font-bold">
                         Enterprise Solutions
                       </span>
                     </Link>
@@ -51,15 +51,15 @@ export default function Hero() {
                 
                 {/* Feature badges */}
                 <div className="flex items-center justify-center gap-3 text-sm text-gray-600 flex-wrap px-4 mb-8">
-                  <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-full px-3 py-1.5 shadow-sm">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                     <span className="font-medium">EQ/EI Assessments</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200 rounded-full px-3 py-1.5 shadow-sm">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span className="font-medium">CEFR Language Tests</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-green-200 rounded-full px-3 py-1.5 shadow-sm">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <span className="font-medium">Enterprise Ready</span>
                   </div>
@@ -67,8 +67,8 @@ export default function Hero() {
 
                 {/* Assessment Cards */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                  <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-purple-200">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <div className="bg-white/90 backdrop-blur-sm border border-purple-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-purple-300 hover:bg-white">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-4 mx-auto">
                       <span className="text-xl">🧠</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">EQ Assessment</h3>
@@ -89,20 +89,14 @@ export default function Hero() {
                         <span className="text-xs font-medium text-purple-700">Relationship Management</span>
                       </div>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-2 text-xs text-purple-600 font-medium justify-center">
-                      <span>• Leadership Skills</span>
-                      <span>• Team Dynamics</span>
-                      <span>• Empathy Analysis</span>
-                    </div>
                   </div>
                   
-                  <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-200">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <div className="bg-white/90 backdrop-blur-sm border border-blue-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-300 hover:bg-white">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-4 mx-auto">
                       <span className="text-xl">🗣️</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Language Proficiency</h3>
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">CEFR-aligned assessment with AI-powered speaking tests for global communication readiness.</p>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">CEFR-aligned assessment with AI-powered speaking, proficiency and writing tests for global communication readiness.</p>
                     
                     {/* Language Flags - more compact */}
                     <div className="flex items-center justify-center gap-2 mb-4">
@@ -142,9 +136,9 @@ export default function Hero() {
       </div>
       
       {/* Enhanced background elements */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-50/10 to-purple-50/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-20 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-50/10 to-blue-50/10 rounded-full blur-3xl" />
       
       <TrialFormModal 
         isOpen={isTrialModalOpen} 
