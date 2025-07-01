@@ -21,11 +21,11 @@ export default function MobileMenu({ isOpen, onClose, onTrialClick }: MobileMenu
       <nav className="flex flex-col gap-6">
         <div className="space-y-2">
           <div className="font-medium text-gray-900 mb-2">Products</div>
-          <Link to="/language-assessment" className="block pl-4 text-gray-700 hover:text-blue-600 transition-colors" onClick={onClose}>
-            Language Assessment
-          </Link>
           <Link to="/eq-assessment" className="block pl-4 text-gray-700 hover:text-purple-600 transition-colors" onClick={onClose}>
             EQ Assessment
+          </Link>
+          <Link to="/language-assessment" className="block pl-4 text-gray-700 hover:text-blue-600 transition-colors" onClick={onClose}>
+            Language Assessment
           </Link>
           <Link to="/custom-assessments" className="block pl-4 text-gray-700 hover:text-green-600 transition-colors" onClick={onClose}>
             Custom Assessments

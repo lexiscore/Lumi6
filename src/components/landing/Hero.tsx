@@ -21,7 +21,7 @@ export default function Hero() {
                 {/* Main heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
                   <span className="text-gray-900">AI-Powered Assessments for</span>
-                  <span className="block text-blue-600">Language & Emotional Intelligence</span>
+                  <span className="block text-blue-600">Emotional Intelligence & Language</span>
                 </h1>
                 
                 {/* Badge */}
@@ -31,7 +31,7 @@ export default function Hero() {
                 
                 {/* Description */}
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium px-4 mb-6">
-                  Enterprise-grade assessments for language proficiency and EQ. 
+                  Enterprise-grade assessments for emotional intelligence and language proficiency. 
                   <span className="text-blue-600 font-semibold"> Scale your global workforce</span> with comprehensive evaluation tools.
                 </p>
                 
@@ -52,12 +52,12 @@ export default function Hero() {
                 {/* Feature badges */}
                 <div className="flex items-center justify-center gap-3 text-sm text-gray-600 flex-wrap px-4 mb-8">
                   <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="font-medium">CEFR Language Tests</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                     <span className="font-medium">EQ/EI Assessments</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="font-medium">CEFR Language Tests</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -67,6 +67,36 @@ export default function Hero() {
 
                 {/* Assessment Cards */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                  <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-purple-200">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                      <span className="text-xl">🧠</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">EQ Assessment</h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">Comprehensive EQ/EI evaluation for leadership, teamwork, and client interaction excellence.</p>
+                    
+                    {/* EI Framework Badges - more compact */}
+                    <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
+                      <div className="bg-purple-50 rounded-lg px-2 py-1">
+                        <span className="text-xs font-medium text-purple-700">Self-Awareness</span>
+                      </div>
+                      <div className="bg-purple-50 rounded-lg px-2 py-1">
+                        <span className="text-xs font-medium text-purple-700">Self-Management</span>
+                      </div>
+                      <div className="bg-purple-50 rounded-lg px-2 py-1">
+                        <span className="text-xs font-medium text-purple-700">Social Awareness</span>
+                      </div>
+                      <div className="bg-purple-50 rounded-lg px-2 py-1">
+                        <span className="text-xs font-medium text-purple-700">Relationship Management</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 text-xs text-purple-600 font-medium justify-center">
+                      <span>• Leadership Skills</span>
+                      <span>• Team Dynamics</span>
+                      <span>• Empathy Analysis</span>
+                    </div>
+                  </div>
+                  
                   <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-200">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                       <span className="text-xl">🗣️</span>
@@ -102,33 +132,6 @@ export default function Hero() {
                       <span>• Speaking Tests</span>
                       <span>• CEFR Certified</span>
                       <span>• Instant Results</span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-purple-200">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-xl">🧠</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">EQ</h3>
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">Comprehensive EQ/EI evaluation for leadership, teamwork, and client interaction excellence.</p>
-                    
-                    {/* EI Framework Badges - more compact */}
-                    <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
-                      <div className="bg-purple-50 rounded-lg px-2 py-1">
-                        <span className="text-xs font-medium text-purple-700">Goleman Framework</span>
-                      </div>
-                      <div className="bg-purple-50 rounded-lg px-2 py-1">
-                        <span className="text-xs font-medium text-purple-700">MSCEIT</span>
-                      </div>
-                      <div className="bg-purple-50 rounded-lg px-2 py-1">
-                        <span className="text-xs font-medium text-purple-700">EQ-i 2.0</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 text-xs text-purple-600 font-medium justify-center">
-                      <span>• Leadership Skills</span>
-                      <span>• Team Dynamics</span>
-                      <span>• Empathy Analysis</span>
                     </div>
                   </div>
                 </div>

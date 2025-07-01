@@ -52,17 +52,6 @@ export default function ProductsDropdown({ isOpen, setIsOpen }: ProductsDropdown
         >
           <div className="px-2">
             <Link 
-              to="/language-assessment" 
-              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              <div className="font-medium flex items-center gap-2">
-                🧩 Language Assessment
-              </div>
-              <div className="text-sm text-gray-500">CEFR-aligned English assessments for hiring & development</div>
-            </Link>
-            
-            <Link 
               to="/eq-assessment" 
               className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors rounded-lg"
               onClick={() => setIsOpen(false)}
@@ -71,6 +60,17 @@ export default function ProductsDropdown({ isOpen, setIsOpen }: ProductsDropdown
                 ❤️ EQ Assessment
               </div>
               <div className="text-sm text-gray-500">For leadership, learning, talent and org development</div>
+            </Link>
+
+            <Link 
+              to="/language-assessment" 
+              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="font-medium flex items-center gap-2">
+                🧩 Language Assessment
+              </div>
+              <div className="text-sm text-gray-500">CEFR-aligned English assessments for hiring & development</div>
             </Link>
             
             <Link 
