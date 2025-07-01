@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -93,46 +93,40 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Nunito Sans', -apple-system, system-ui, sans-serif;
-    font-feature-settings: 'cv11', 'ss01';
-    font-variation-settings: 'opsz' 32;
+    font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: 600;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   .font-display {
-    font-family: 'Lora', serif;
+    font-family: 'Roboto Slab', serif;
   }
 
   .font-body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
 @layer components {
-  .glass-effect {
-    @apply backdrop-blur-xl bg-white/80 border border-white/20;
+  .modern-card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-200;
   }
 
-  .gradient-border {
-    position: relative;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
-    border: 2px solid transparent;
+  .modern-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent;
-  }
-
-  .shadow-glow {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  .modern-text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
   }
 }

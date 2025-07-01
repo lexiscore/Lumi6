@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,9 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Lora', 'serif'],
-				'body': ['Nunito Sans', 'sans-serif'],
-				'sans': ['Nunito Sans', 'sans-serif'],
+				'display': ['Roboto Slab', 'serif'],
+				'body': ['Roboto', 'sans-serif'],
+				'sans': ['Roboto', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
