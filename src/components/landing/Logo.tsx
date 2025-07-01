@@ -1,8 +1,8 @@
 
-export default function Logo({ className = "w-16 h-16", textClassName = "text-2xl" }: { className?: string; textClassName?: string }) {
+export default function Logo({ className = "w-20 h-20", textClassName = "text-3xl" }: { className?: string; textClassName?: string }) {
   return (
-    <div className="flex items-center gap-3 group">
-      <div className={`relative bg-white rounded-xl p-2 shadow-sm border border-gray-200 group-hover:shadow-md transition-all duration-200 ${className}`}>
+    <div className="flex items-center gap-4 group">
+      <div className={`relative bg-white rounded-2xl p-3 shadow-lg border border-slate-200/50 group-hover:shadow-xl transition-all duration-300 ${className}`}>
         <img 
           src="/lovable-uploads/0e185da3-59ad-4a3f-b64a-acd8f48992c8.png" 
           alt="Lumi6 Logo" 
@@ -10,11 +10,8 @@ export default function Logo({ className = "w-16 h-16", textClassName = "text-2x
         />
       </div>
       <div className="flex flex-col">
-        <span className={`font-semibold text-gray-800 font-display ${textClassName}`}>
+        <span className={`font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-display ${textClassName}`}>
           Lumi6
-        </span>
-        <span className="text-xs text-gray-500 font-body uppercase tracking-wide">
-          Assessment Platform
         </span>
       </div>
     </div>

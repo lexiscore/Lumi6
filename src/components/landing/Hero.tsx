@@ -13,33 +13,37 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50 min-h-screen flex items-center justify-center pt-32 pb-16">
+      <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen flex items-center justify-center pt-32 pb-16">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+        
         <div className="relative z-10 w-full">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-5xl">
               <div className="text-center">
                 {/* Main heading */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
-                  <span className="text-gray-900">Professional Assessment Platform</span>
-                  <span className="block modern-text-gradient font-display">EQ & Language Testing</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-8">
+                  <span className="text-slate-900">Corporate EQ and</span>
+                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-display">Language Assessment</span>
                 </h1>
                 
                 {/* Badge */}
-                <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-4 py-2 text-sm font-medium text-blue-700 mb-6">
-                  🎯 Enterprise-Grade Assessments
+                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 px-6 py-3 text-sm font-medium text-blue-700 mb-8 shadow-sm">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
+                  For people-first organizations
                 </div>
                 
                 {/* Description */}
-                <p className="text-lg sm:text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto font-normal mb-8">
+                <p className="text-xl sm:text-2xl leading-relaxed text-slate-600 max-w-4xl mx-auto font-normal mb-12">
                   Comprehensive emotional intelligence and language proficiency assessments 
-                  <span className="text-blue-600 font-medium"> powered by AI technology</span> for modern workplaces.
+                  <span className="text-blue-600 font-semibold"> powered by AI technology</span> for modern workplaces.
                 </p>
                 
                 {/* Buttons */}
-                <div className="flex items-center justify-center gap-4 flex-wrap mb-12">
+                <div className="flex items-center justify-center gap-6 flex-wrap mb-16">
                   <Button 
                     size="lg" 
-                    className="px-8 py-4 text-base font-medium bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow-md transition-all duration-200 rounded-lg" 
+                    className="px-10 py-5 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl text-white border-0" 
                     onClick={handleTrialClick}
                   >
                     Start Assessment
@@ -47,7 +51,7 @@ export default function Hero() {
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="px-8 py-4 text-base font-medium border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 rounded-lg" 
+                    className="px-10 py-5 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 rounded-2xl bg-white/80 backdrop-blur-sm" 
                     asChild
                   >
                     <Link to="#features">
@@ -57,45 +61,45 @@ export default function Hero() {
                 </div>
 
                 {/* Assessment Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  <div className="modern-card p-8">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-xl">🧠</span>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                  <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                      <span className="text-3xl">🧠</span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 font-display">EQ Assessment</h3>
-                    <p className="text-gray-600 mb-6 text-sm leading-relaxed">Evaluate emotional intelligence across four core competencies for workplace success.</p>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4 font-display">EQ Assessment</h3>
+                    <p className="text-slate-600 mb-8 text-lg leading-relaxed">Evaluate emotional intelligence across four core competencies for workplace success and leadership development.</p>
                     
-                    <div className="flex flex-wrap gap-2 text-xs text-blue-600 font-medium justify-center">
-                      <span className="bg-blue-50 px-2 py-1 rounded">Self-Awareness</span>
-                      <span className="bg-blue-50 px-2 py-1 rounded">Self-Management</span>
-                      <span className="bg-blue-50 px-2 py-1 rounded">Social Awareness</span>
-                      <span className="bg-blue-50 px-2 py-1 rounded">Relationship Management</span>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      <span className="bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">Self-Awareness</span>
+                      <span className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">Self-Management</span>
+                      <span className="bg-gradient-to-r from-green-50 to-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Social Awareness</span>
+                      <span className="bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium">Relationship Management</span>
                     </div>
                   </div>
                   
-                  <div className="modern-card p-8">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-xl">🗣️</span>
+                  <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                      <span className="text-3xl">🗣️</span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 font-display">Language Proficiency</h3>
-                    <p className="text-gray-600 mb-6 text-sm leading-relaxed">CEFR-aligned assessment with AI-powered speaking, proficiency and writing tests for global communication readiness.</p>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4 font-display">Language Proficiency</h3>
+                    <p className="text-slate-600 mb-8 text-lg leading-relaxed">CEFR-aligned assessment with AI-powered speaking, proficiency and writing tests for global communication readiness.</p>
                     
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                      <div className="flex items-center gap-1 bg-green-50 rounded px-2 py-1">
-                        <span className="text-sm">🇺🇸</span>
-                        <span className="text-xs font-medium text-green-700">EN</span>
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-full px-4 py-2">
+                        <span className="text-lg">🇺🇸</span>
+                        <span className="text-sm font-semibold text-blue-700">EN</span>
                       </div>
-                      <div className="flex items-center gap-1 bg-green-50 rounded px-2 py-1">
-                        <span className="text-sm">🇪🇸</span>
-                        <span className="text-xs font-medium text-green-700">ES</span>
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-green-50 to-green-100 rounded-full px-4 py-2">
+                        <span className="text-lg">🇪🇸</span>
+                        <span className="text-sm font-semibold text-green-700">ES</span>
                       </div>
-                      <div className="flex items-center gap-1 bg-green-50 rounded px-2 py-1">
-                        <span className="text-sm">🇫🇷</span>
-                        <span className="text-xs font-medium text-green-700">FR</span>
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-purple-50 to-purple-100 rounded-full px-4 py-2">
+                        <span className="text-lg">🇫🇷</span>
+                        <span className="text-sm font-semibold text-purple-700">FR</span>
                       </div>
-                      <div className="flex items-center gap-1 bg-green-50 rounded px-2 py-1">
-                        <span className="text-sm">🇩🇪</span>
-                        <span className="text-xs font-medium text-green-700">DE</span>
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-orange-50 to-orange-100 rounded-full px-4 py-2">
+                        <span className="text-lg">🇩🇪</span>
+                        <span className="text-sm font-semibold text-orange-700">DE</span>
                       </div>
                     </div>
                   </div>
