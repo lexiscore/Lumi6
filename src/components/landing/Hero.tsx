@@ -1,18 +1,13 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import TrialFormModal from "./TrialFormModal";
-
 export default function Hero() {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-
   const handleTrialClick = () => {
     setIsTrialModalOpen(true);
   };
-
-  return (
-    <>
+  return <>
       <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen flex items-center justify-center pt-32 pb-16">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
@@ -24,7 +19,7 @@ export default function Hero() {
                 {/* Main heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-8">
                   <span className="text-slate-900">Corporate EQ and</span>
-                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-display">Language Assessment</span>
+                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-display mx-0 px-0 my-0 py-[10px]">Language Assessment</span>
                 </h1>
                 
                 {/* Badge */}
@@ -41,19 +36,10 @@ export default function Hero() {
                 
                 {/* Buttons */}
                 <div className="flex items-center justify-center gap-6 flex-wrap mb-16">
-                  <Button 
-                    size="lg" 
-                    className="px-10 py-5 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl text-white border-0" 
-                    onClick={handleTrialClick}
-                  >
+                  <Button size="lg" className="px-10 py-5 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl text-white border-0" onClick={handleTrialClick}>
                     Start Assessment
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="px-10 py-5 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 rounded-2xl bg-white/80 backdrop-blur-sm" 
-                    asChild
-                  >
+                  <Button variant="outline" size="lg" className="px-10 py-5 text-lg font-semibold border-2 border-slate-300 text-slate-700 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 rounded-2xl bg-white/80 backdrop-blur-sm" asChild>
                     <Link to="#features">
                       Learn More
                     </Link>
@@ -110,10 +96,6 @@ export default function Hero() {
         </div>
       </div>
       
-      <TrialFormModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
-      />
-    </>
-  );
+      <TrialFormModal isOpen={isTrialModalOpen} onClose={() => setIsTrialModalOpen(false)} />
+    </>;
 }
