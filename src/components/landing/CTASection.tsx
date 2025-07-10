@@ -12,50 +12,50 @@ export default function CTASection() {
 
   return (
     <>
-      <div className="bg-blue-600 relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 relative">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center rounded-full bg-white/20 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/30 mb-8 backdrop-blur-sm">
+      <div className="brand-gradient relative overflow-hidden py-32 sm:py-40">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="inline-flex items-center rounded-full glass-card px-8 py-4 text-sm font-semibold text-background mb-12 glow-effect">
               ✨ Trusted by enterprise teams worldwide
             </div>
-            <h2 className="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+            <h2 className="text-5xl sm:text-7xl font-bold tracking-tight text-background leading-tight mb-8">
               Ready to scale your
-              <span className="block text-blue-100">global workforce?</span>
+              <span className="block text-background/80">global workforce?</span>
             </h2>
-            <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-blue-100">
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-8 text-background/90">
               Join thousands of businesses and HR teams who trust Lumi6 for accurate, scalable language assessment with enterprise-grade security and instant results.
             </p>
-            <div className="mt-12 flex items-center justify-center gap-6 flex-wrap">
-              <Button size="lg" variant="secondary" className="px-10 py-5 text-lg font-semibold bg-white text-blue-700 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl" onClick={handleTrialClick}>
+            <div className="mt-16 flex items-center justify-center gap-8 flex-wrap">
+              <Button size="lg" className="px-12 py-6 text-xl font-bold bg-background text-primary hover:bg-background/90 hover:scale-105 shadow-2xl hover:glow-effect transition-all duration-500 rounded-2xl" onClick={handleTrialClick}>
                 Start Enterprise Trial
               </Button>
-              <Button size="lg" className="px-10 py-5 text-lg font-semibold bg-white/20 text-white border-2 border-white/50 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 rounded-xl" asChild>
+              <Button size="lg" className="px-12 py-6 text-xl font-semibold glass-card text-background border-2 border-background/50 hover:border-background hover:bg-background/10 transition-all duration-500 rounded-2xl hover:glow-effect" asChild>
                 <Link to="#features">
-                  <span className="font-bold text-white">Enterprise Solutions</span>
+                  Enterprise Solutions
                 </Link>
               </Button>
             </div>
             
-            <div className="mt-16 flex items-center justify-center gap-8 text-blue-200 flex-wrap">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <span className="font-medium text-sm">Bulk Assessment</span>
+            <div className="mt-20 flex items-center justify-center gap-10 text-background/90 flex-wrap">
+              <div className="flex items-center gap-4 glass-card rounded-full px-8 py-4 hover:glow-effect transition-all duration-300">
+                <div className="w-3 h-3 bg-background rounded-full glow-effect"></div>
+                <span className="font-semibold">Bulk Assessment</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <span className="font-medium text-sm">API Integration</span>
+              <div className="flex items-center gap-4 glass-card rounded-full px-8 py-4 hover:glow-effect transition-all duration-300">
+                <div className="w-3 h-3 bg-background rounded-full glow-effect"></div>
+                <span className="font-semibold">API Integration</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-                <span className="font-medium text-sm">Enterprise Security</span>
+              <div className="flex items-center gap-4 glass-card rounded-full px-8 py-4 hover:glow-effect transition-all duration-300">
+                <div className="w-3 h-3 bg-background rounded-full glow-effect"></div>
+                <span className="font-semibold">Enterprise Security</span>
               </div>
             </div>
           </div>
         </div>
-        
-        {/* Minimal background elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl" />
       </div>
       
       <TrialFormModal 
