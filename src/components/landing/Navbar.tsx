@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 shadow-2xl">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -42,27 +42,27 @@ export default function Navbar() {
               <ProductsDropdown isOpen={isProductsOpen} setIsOpen={setIsProductsOpen} />
               <SolutionsDropdown isOpen={isSolutionsOpen} setIsOpen={setIsSolutionsOpen} />
               
-              <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-all font-medium relative group">
+              <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 How It Works
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 glow-effect"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <Link to="/cefr-guide" className="text-muted-foreground hover:text-primary transition-all font-medium relative group">
+              <Link to="/cefr-guide" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 CEFR Guide
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 glow-effect"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to="/why-eq-test" className="text-muted-foreground hover:text-primary transition-all font-medium relative group">
+              <Link to="/why-eq-test" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 Why EQ Test
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 glow-effect"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-all font-medium relative group">
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group">
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 glow-effect"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             </nav>
             
             {/* Authentication button for desktop */}
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4">
-              <Button className="brand-gradient hover:scale-105 shadow-lg hover:glow-effect transition-all duration-500 font-semibold rounded-xl text-background" onClick={handleTrialClick}>
+              <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold rounded-xl" onClick={handleTrialClick}>
                 Start Your Trial
               </Button>
             </div>
