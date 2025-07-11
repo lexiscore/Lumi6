@@ -79,32 +79,32 @@ const features = [
 
 export default function Features() {
   return (
-    <div id="features" className="warm-section py-24 sm:py-32 relative overflow-hidden">
+    <div id="features" className="bg-stone-50 py-24 sm:py-32 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-3xl lg:text-center">
-          <div className="inline-flex items-center rounded-full bg-secondary border border-border px-6 py-3 text-sm font-semibold text-secondary-foreground mb-8">
+          <div className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-6 py-3 text-sm font-semibold text-blue-700 mb-8">
             Comprehensive Assessment Platform
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight text-foreground mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight text-gray-900 mb-6">
             Everything you need for
-            <span className="block text-primary">workforce evaluation</span>
+            <span className="block text-blue-600">workforce evaluation</span>
           </h2>
-          <p className="text-xl leading-8 text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl leading-8 text-gray-600 max-w-2xl mx-auto">
             Our platform offers a complete suite of tools to accurately measure language proficiency and EQ based on internationally-recognized frameworks.
           </p>
         </div>
         <div className="mx-auto mt-20 max-w-6xl">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
             {features.map((feature, index) => (
-              <div key={feature.name} className="group relative p-8 modern-card rounded-2xl border border-border hover:border-primary/50 elegant-shadow hover:shadow-xl transition-all duration-300">
+              <div key={feature.name} className="group relative p-8 bg-stone-25 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
                 <div className="relative">
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary border border-border text-primary group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300`}>
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 border border-blue-200 ${feature.color} group-hover:bg-blue-100 transition-colors duration-300`}>
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-card-foreground">
+                  <h3 className="mt-6 text-xl font-semibold text-gray-900">
                     {feature.name}
                   </h3>
-                  <p className="mt-4 text-base leading-7 text-muted-foreground">{feature.description}</p>
+                  <p className="mt-4 text-base leading-7 text-gray-600">{feature.description}</p>
                 </div>
               </div>
             ))}
