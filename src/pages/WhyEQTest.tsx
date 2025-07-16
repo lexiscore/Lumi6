@@ -56,9 +56,9 @@ const WhyEQTest = () => {
       <Navbar />
       
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           {/* Header */}
-          <div className="mb-12">
+          <div className="mb-16">
             <Button variant="ghost" asChild className="mb-6">
               <Link to="/" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <ArrowLeft size={20} />
@@ -66,55 +66,85 @@ const WhyEQTest = () => {
               </Link>
             </Button>
             
-            <div className="text-center mb-8">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                🌟 Why Emotional Intelligence (EQ) Is the Ultimate Skill in the Age of AI
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-purple-100 to-blue-100 px-6 py-3 text-sm font-semibold text-purple-800 mb-6">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse"></span>
+                The Future of Leadership
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+                Why <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Emotional Intelligence</span> Is the Ultimate Skill in the Age of AI
               </h1>
-              <blockquote className="text-xl italic text-gray-600 border-l-4 border-purple-500 pl-6 mb-8">
-                "AI can think fast, but only humans can think with heart."
-              </blockquote>
+              
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                As AI revolutionizes work, the most valuable skill isn't technical—it's emotional. 
+                Discover why EQ is becoming the ultimate differentiator for leaders and organizations.
+              </p>
+              
+              <div className="flex items-center justify-center gap-6 mb-12">
+                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" asChild>
+                  <Link to="/eq-assessment">Take EQ Assessment</Link>
+                </Button>
+                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold border-2 border-purple-300 text-purple-700 hover:bg-purple-50 rounded-xl transition-all duration-300">
+                  <a href="#learn-more">Learn More</a>
+                </Button>
+              </div>
             </div>
           </div>
 
           {/* Introduction */}
-          <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-gray-700 leading-relaxed mb-6">
-              As artificial intelligence continues to redefine work, creativity, and communication, we are standing at the edge of a profound shift. Tasks once reserved for highly skilled professionals — analyzing data, writing content, solving logic problems — are now being done faster, cheaper, and more efficiently by machines.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>So what does that mean for human potential?</strong>
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Ironically, it's the most <em>human</em> trait of all — <strong className="text-purple-600">Emotional Intelligence (EQ)</strong> — that's becoming the most valuable skill in the workplace.
-            </p>
+          <div id="learn-more" className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">The AI Revolution Changes Everything</h2>
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  As artificial intelligence continues to redefine work, creativity, and communication, we are standing at the edge of a profound shift. Tasks once reserved for highly skilled professionals are now being done faster, cheaper, and more efficiently by machines.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  <strong>So what does that mean for human potential?</strong>
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Ironically, it's the most <em>human</em> trait of all — <strong className="text-purple-600">Emotional Intelligence (EQ)</strong> — that's becoming the most valuable skill in the workplace.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8 text-center">
+                <div className="text-6xl mb-6">🧠💝</div>
+                <blockquote className="text-2xl italic text-gray-800 font-medium">
+                  "AI can think fast, but only humans can think with heart."
+                </blockquote>
+              </div>
+            </div>
           </div>
 
           {/* What AI Can Do */}
-          <Card className="mb-12 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-6">
-              <h2 className="text-2xl font-bold flex items-center gap-3 mb-4">
-                <Brain size={28} />
+          <Card className="mb-16 overflow-hidden shadow-xl">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8">
+              <h2 className="text-3xl font-bold flex items-center gap-3 mb-4">
+                <Brain size={32} />
                 🤖 What AI Can Do Now
               </h2>
+              <p className="text-blue-100 text-lg">The capabilities that are already transforming industries</p>
             </div>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {aiCapabilities.map((capability, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="text-blue-500 mt-1 flex-shrink-0" size={20} />
-                        <span className="text-gray-700">{capability}</span>
+                      <li key={index} className="flex items-start gap-4">
+                        <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <CheckCircle className="text-white" size={16} />
+                        </div>
+                        <span className="text-gray-700 text-lg">{capability}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex items-center justify-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="AI technology" 
-                    className="rounded-xl shadow-lg max-w-full h-auto"
-                  />
+                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center">
+                    <div className="text-6xl mb-4">🤖</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Capabilities</h3>
+                    <p className="text-gray-600">Processing power that exceeds human capacity in speed and accuracy</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
