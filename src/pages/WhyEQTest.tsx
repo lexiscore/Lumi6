@@ -83,7 +83,7 @@ const WhyEQTest = () => {
       <Navbar />
       
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           {/* Header */}
           <div className="mb-12 sm:mb-16">
             <Button variant="ghost" asChild className="mb-6 sm:mb-8">
