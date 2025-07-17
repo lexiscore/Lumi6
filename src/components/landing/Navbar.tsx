@@ -24,6 +24,15 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-subtle">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center py-2 sm:py-3">
+            {/* Logo on left side */}
+            <div className="flex items-center">
+              <Link to="/" className="flex items-center group">
+                <div className="relative">
+                  <Logo className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 group-hover:scale-105 transition-transform duration-300" />
+                </div>
+              </Link>
+            </div>
+            
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <Button 
@@ -72,17 +81,8 @@ export default function Navbar() {
               </a>
             </nav>
             
-            {/* Logo moved to right side */}
-            <div className="flex items-center">
-              <Link to="/" className="flex items-center group">
-                <div className="relative">
-                  <Logo className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 group-hover:scale-105 transition-transform duration-300" />
-                </div>
-              </Link>
-            </div>
-            
             {/* Authentication button for desktop */}
-            <div className="hidden md:flex items-center gap-2 sm:gap-3 ml-4">
+            <div className="hidden md:flex items-center gap-2 sm:gap-3">
               <Button 
                 className="bg-gradient-purple hover:shadow-purple-glow transition-all duration-300 font-semibold rounded-xl text-white border-0 group text-sm lg:text-base px-4 sm:px-6 py-2 sm:py-3" 
                 onClick={handleTrialClick}
