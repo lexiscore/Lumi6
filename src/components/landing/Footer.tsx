@@ -5,11 +5,11 @@ import Logo from './Logo';
 export default function Footer() {
   return (
     <footer id="contact" className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-neutral-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-6 sm:space-y-8 xl:col-span-1">
+          <div className="space-y-4 sm:space-y-6 xl:col-span-1">
             <div className="flex items-center">
-              <Logo className="w-20 h-20 sm:w-24 sm:h-24" textClassName="text-2xl sm:text-3xl" />
+              <Logo className="w-14 h-14 sm:w-16 sm:h-16" />
             </div>
             <p className="text-base sm:text-lg leading-7 text-neutral-400 font-normal">
               Corporate EQ and Language assessment, for people first organizations

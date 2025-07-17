@@ -23,11 +23,11 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-subtle">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="flex justify-between items-center py-3 sm:py-4 md:justify-start md:space-x-10">
+          <div className="flex justify-between items-center py-2 sm:py-3 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/" className="flex items-center group">
                 <div className="relative">
-                  <Logo className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 group-hover:scale-105 transition-transform duration-300" textClassName="text-xl sm:text-2xl lg:text-3xl" />
+                  <Logo className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 group-hover:scale-105 transition-transform duration-300" />
                 </div>
               </Link>
             </div>
@@ -39,9 +39,9 @@ export default function Navbar() {
                 size="icon" 
                 onClick={() => setIsMenuOpen(!isMenuOpen)} 
                 aria-label="Toggle menu" 
-                className="hover:bg-neutral-100 text-neutral-700"
+                className="hover:bg-neutral-100 text-neutral-700 h-8 w-8 sm:h-10 sm:w-10"
               >
-                {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
+                {isMenuOpen ? <X size={16} className="sm:w-5 sm:h-5" /> : <Menu size={16} className="sm:w-5 sm:h-5" />}
               </Button>
             </div>
             
