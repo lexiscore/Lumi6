@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6 sm:space-y-8 xl:col-span-1">
             <div className="flex items-center">
-              <Logo className="w-16 h-16 sm:w-20 sm:h-20" textClassName="text-xl sm:text-2xl" />
+              <Logo className="w-20 h-20 sm:w-24 sm:h-24" textClassName="text-2xl sm:text-3xl" />
             </div>
             <p className="text-base sm:text-lg leading-7 text-neutral-400 font-normal">
               Corporate EQ and Language assessment, for people first organizations

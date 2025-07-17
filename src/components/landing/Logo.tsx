@@ -2,7 +2,7 @@
 export default function Logo({ className = "w-20 h-20", textClassName = "text-3xl" }: { className?: string; textClassName?: string }) {
   return (
     <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 group">
-      <div className={`relative bg-white rounded-2xl p-2 sm:p-3 shadow-lg border border-slate-200/50 group-hover:shadow-xl transition-all duration-300 ${className}`}>
+      <div className={`relative ${className}`}>
         <img 
           src="/lumi6_logo_final.png" 
           alt="Lumi6 Logo" 
