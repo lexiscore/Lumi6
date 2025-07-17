@@ -24,10 +24,17 @@ const LanguageAssessment = () => {
               CEFR-aligned English language assessments designed for smarter hiring, onboarding, and skill development—powered by Lumi6.
             </p>
             <div className="flex justify-center gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-lg">
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-lg"
+                onClick={() => window.location.href = '#contact'}
+              >
                 Start Free Trial
               </Button>
-              <Button variant="outline" className="px-8 py-3 text-lg">
+              <Button 
+                variant="outline" 
+                className="px-8 py-3 text-lg"
+                onClick={() => window.location.href = '#how-it-works'}
+              >
                 View Demo
               </Button>
             </div>

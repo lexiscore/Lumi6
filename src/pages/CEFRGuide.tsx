@@ -106,7 +106,7 @@ const CEFRGuide = () => {
           <div className="mb-16">
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-8">
               <img 
-                src="/lovable-uploads/391ad250-dc25-4228-b8b0-a8f20b509049.png" 
+                src="/image-uploads/391ad250-dc25-4228-b8b0-a8f20b509049.png" 
                 alt="CEFR Language Levels Visual Guide" 
                 className="w-full max-w-4xl mx-auto rounded-xl shadow-lg"
               />

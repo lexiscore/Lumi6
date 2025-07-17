@@ -4,7 +4,7 @@ export default function Logo({ className = "w-20 h-20", textClassName = "text-3x
     <div className="flex items-center gap-4 group">
       <div className={`relative bg-white rounded-2xl p-3 shadow-lg border border-slate-200/50 group-hover:shadow-xl transition-all duration-300 ${className}`}>
         <img 
-          src="/lovable-uploads/0e185da3-59ad-4a3f-b64a-acd8f48992c8.png" 
+          src="/image-uploads/0e185da3-59ad-4a3f-b64a-acd8f48992c8.png" 
           alt="Lumi6 Logo" 
           className="w-full h-full object-contain"
         />

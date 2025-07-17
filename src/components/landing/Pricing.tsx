@@ -1,6 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useState } from "react";
+import TrialFormModal from "./TrialFormModal";
 
 const pricingTiers = [
   {
@@ -50,8 +52,15 @@ const pricingTiers = [
 ];
 
 export default function Pricing() {
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  
+  const handleTrialClick = () => {
+    setIsTrialModalOpen(true);
+  };
+  
   return (
-    <div id="pricing" className="bg-white py-24 sm:py-32">
+    <>
+      <div id="pricing" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-600">Pricing</h2>
@@ -106,6 +115,7 @@ export default function Pricing() {
                 <Button 
                   className={`mt-8 w-full ${tier.popular ? '' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`} 
                   variant={tier.popular ? 'default' : 'outline'}
+                  onClick={tier.cta === 'Start Free Trial' ? handleTrialClick : undefined}
                 >
                   {tier.cta}
                 </Button>
@@ -114,6 +124,12 @@ export default function Pricing() {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+      
+      <TrialFormModal 
+        isOpen={isTrialModalOpen} 
+        onClose={() => setIsTrialModalOpen(false)} 
+      />
+    </>
   );
 }

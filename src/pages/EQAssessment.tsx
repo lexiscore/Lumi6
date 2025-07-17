@@ -24,10 +24,17 @@ const EQAssessment = () => {
               Comprehensive emotional intelligence assessments for leadership development, learning programs, talent management, and organizational growth.
             </p>
             <div className="flex justify-center gap-4">
-              <Button className="bg-purple-600 hover:bg-purple-700 px-8 py-3 text-lg">
+              <Button 
+                className="bg-purple-600 hover:bg-purple-700 px-8 py-3 text-lg"
+                onClick={() => window.location.href = '#contact'}
+              >
                 Start Assessment
               </Button>
-              <Button variant="outline" className="px-8 py-3 text-lg">
+              <Button 
+                variant="outline" 
+                className="px-8 py-3 text-lg"
+                onClick={() => window.location.href = '#how-it-works'}
+              >
                 Learn More
               </Button>
             </div>
