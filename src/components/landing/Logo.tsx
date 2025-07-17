@@ -1,8 +1,8 @@
 
 export default function Logo({ className = "w-20 h-20", textClassName = "text-3xl" }: { className?: string; textClassName?: string }) {
   return (
-    <div className="flex items-center gap-4 group">
-      <div className={`relative bg-white rounded-2xl p-3 shadow-lg border border-slate-200/50 group-hover:shadow-xl transition-all duration-300 ${className}`}>
+    <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 group">
+      <div className={`relative bg-white rounded-2xl p-2 sm:p-3 shadow-lg border border-slate-200/50 group-hover:shadow-xl transition-all duration-300 ${className}`}>
         <img 
           src="/image-uploads/0e185da3-59ad-4a3f-b64a-acd8f48992c8.png" 
           alt="Lumi6 Logo" 

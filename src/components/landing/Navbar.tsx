@@ -27,7 +27,7 @@ export default function Navbar() {
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/" className="flex items-center group">
                 <div className="relative">
-                  <Logo className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-105 transition-transform duration-300" textClassName="text-base sm:text-lg" />
+                  <Logo className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 group-hover:scale-105 transition-transform duration-300" textClassName="text-lg sm:text-xl lg:text-2xl" />
                 </div>
               </Link>
             </div>
