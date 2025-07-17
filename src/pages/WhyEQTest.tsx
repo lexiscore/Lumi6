@@ -83,7 +83,7 @@ const WhyEQTest = () => {
       <Navbar />
       
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Header */}
           <div className="mb-12 sm:mb-16">
             <Button variant="ghost" asChild className="mb-6 sm:mb-8">
@@ -109,13 +109,6 @@ const WhyEQTest = () => {
                 As AI redefines work, creativity, and communication, the most <strong className="text-purple-600">human trait</strong> becomes the most valuable skill.
               </p>
             </div>
-          </div>
-
-          {/* Hero Quote */}
-          <div className="bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-2xl p-6 sm:p-8 mb-12 sm:mb-16 shadow-medium">
-            <blockquote className="text-xl sm:text-2xl md:text-3xl italic text-neutral-700 text-center leading-relaxed">
-              "AI can think fast, but only humans can think with <span className="text-purple-600 font-semibold">heart</span>."
-            </blockquote>
           </div>
 
           {/* Introduction */}
