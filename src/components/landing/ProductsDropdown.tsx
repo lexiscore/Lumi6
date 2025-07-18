@@ -35,14 +35,14 @@ export default function ProductsDropdown({ isOpen, setIsOpen }: ProductsDropdown
   return (
     <div className="relative group">
       <button 
-        className="text-gray-700 hover:text-blue-600 transition-all font-medium relative group flex items-center gap-1" 
+        className="text-neutral-700 hover:text-neutral-900 transition-all font-medium relative group flex items-center gap-1 text-sm" 
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         onClick={() => setIsOpen(!isOpen)}
       >
         Products
         <ChevronDown size={16} className="transform transition-transform group-hover:rotate-180" />
-        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
       </button>
       {isOpen && (
         <div 
