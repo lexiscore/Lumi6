@@ -2,9 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, Users, Award, Target } from "lucide-react";
+import { ArrowLeft, BookOpen, Users, Target, Award } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import TrialFormModal from "@/components/landing/TrialFormModal";
+import { useState } from "react";
 
 const CEFRGuide = () => {
   const cefrLevels = [
@@ -75,6 +77,8 @@ const CEFRGuide = () => {
       ]
     }
   ];
+
+  const [isTrialFormModalOpen, setIsTrialFormModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
@@ -229,14 +233,19 @@ const CEFRGuide = () => {
               Get your official CEFR certification with our AI-powered assessment platform. 
               Accurate, fast, and recognized worldwide.
             </p>
-            <Button size="lg" className="px-8 py-4 text-lg bg-blue-600 hover:bg-blue-700" asChild>
-              <Link to="/sign-up">Start Your CEFR Assessment</Link>
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg bg-blue-600 hover:bg-blue-700"
+              onClick={() => setIsTrialFormModalOpen(true)}
+            >
+              Start Your CEFR Assessment
             </Button>
           </div>
         </div>
       </main>
       
       <Footer />
+      <TrialFormModal isOpen={isTrialFormModalOpen} onClose={() => setIsTrialFormModalOpen(false)} />
     </div>
   );
 };

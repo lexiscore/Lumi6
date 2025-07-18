@@ -2,9 +2,31 @@
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
-import { Settings, Code, Database, Zap, CheckCircle, Users, Target, Shield, Clock, BarChart3, Puzzle, Globe } from "lucide-react";
+import { 
+  CheckCircle, 
+  BookOpen, 
+  MessageSquare, 
+  Target, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+  Award, 
+  Star, 
+  Clock, 
+  TrendingUp,
+  BarChart3,
+  Settings,
+  Code,
+  Database,
+  Puzzle
+} from "lucide-react";
+import TrialFormModal from "@/components/landing/TrialFormModal";
+import { useState } from "react";
 
 const CustomAssessments = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       <Navbar />
@@ -359,7 +381,10 @@ const CustomAssessments = () => {
             Let's discuss your unique requirements and create the perfect assessment solution for your organization.
           </p>
           <div className="flex justify-center gap-4">
-            <Button className="bg-green-600 hover:bg-green-700 px-8 py-3 text-lg">
+            <Button 
+              className="bg-green-600 hover:bg-green-700 px-8 py-3 text-lg"
+              onClick={() => setIsModalOpen(true)}
+            >
               Start Your Project
             </Button>
             <Button variant="outline" className="px-8 py-3 text-lg">
@@ -370,6 +395,11 @@ const CustomAssessments = () => {
       </section>
 
       <Footer />
+      
+      <TrialFormModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

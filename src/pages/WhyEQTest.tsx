@@ -2,9 +2,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Brain, Heart, Users, TrendingUp, CheckCircle, XCircle, Star, Award, Target, Shield, Zap } from "lucide-react";
+import { 
+  Brain, 
+  Heart, 
+  Users, 
+  Star, 
+  CheckCircle, 
+  XCircle, 
+  Target, 
+  Zap, 
+  Award,
+  Eye,
+  Ear,
+  MessageSquare,
+  TrendingUp,
+  ArrowLeft
+} from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import TrialFormModal from "@/components/landing/TrialFormModal";
+import { useState } from "react";
 
 const WhyEQTest = () => {
   const aiCapabilities = [
@@ -54,7 +71,7 @@ const WhyEQTest = () => {
     {
       title: "Self-Management", 
       description: "Controlling reactions and adapting to change",
-      icon: Shield,
+      icon: Eye,
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -77,6 +94,8 @@ const WhyEQTest = () => {
     if (value === "medium") return <span className="text-yellow-600">⚠️</span>;
     return <span className="text-red-600">❌</span>;
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-purple-50">
@@ -309,18 +328,25 @@ const WhyEQTest = () => {
               Discover your emotional intelligence level with our comprehensive AI-powered assessment. 
               Build the skills that matter most in the age of AI.
             </p>
-            <Button size="lg" className="px-8 py-4 text-lg bg-gradient-purple hover:shadow-purple-glow transition-all duration-300 font-semibold rounded-xl text-white border-0 group" asChild>
-              <Link to="/eq-assessment" className="flex items-center gap-2">
-                <Zap className="w-5 h-5 group-hover:animate-pulse" />
-                Start Your EQ Assessment
-                <Award className="w-5 h-5" />
-              </Link>
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg bg-gradient-purple hover:shadow-purple-glow transition-all duration-300 font-semibold rounded-xl text-white border-0 group"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <Zap className="w-5 h-5 group-hover:animate-pulse" />
+              Start Your EQ Assessment
+              <Award className="w-5 h-5" />
             </Button>
           </div>
         </div>
       </main>
       
       <Footer />
+      
+      <TrialFormModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

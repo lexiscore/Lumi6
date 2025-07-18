@@ -3,8 +3,12 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, MessageSquare, Target, Zap, Shield, Users, Globe, Award, Star, Clock, TrendingUp } from "lucide-react";
+import TrialFormModal from "@/components/landing/TrialFormModal";
+import { useState } from "react";
 
 const LanguageAssessment = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <Navbar />
@@ -276,7 +280,10 @@ const LanguageAssessment = () => {
             Join thousands of organizations using Lumi6 for accurate, scalable language evaluation.
           </p>
           <div className="flex justify-center gap-4">
-            <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
+            <Button 
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg"
+              onClick={() => setIsModalOpen(true)}
+            >
               Start Your Free Trial
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
@@ -287,6 +294,11 @@ const LanguageAssessment = () => {
       </section>
 
       <Footer />
+      
+      <TrialFormModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

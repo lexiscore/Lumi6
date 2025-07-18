@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import TrialFormModal from "./TrialFormModal";
 import ProductsDropdown from "./ProductsDropdown";
-import SolutionsDropdown from "./SolutionsDropdown";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
@@ -22,18 +21,21 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-subtle">
-        <div className="mx-auto px-2 sm:px-4 max-w-[1100px] flex items-center h-[64px]">
+        <div className="mx-auto px-2 sm:px-4 max-w-[1100px] flex items-center h-[64px] justify-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center group mr-6">
+          <Link to="/" className="flex items-center group mr-4">
             <div className="relative">
               <Logo className="w-12 h-12 sm:w-16 sm:h-16 group-hover:scale-105 transition-transform duration-300" />
             </div>
           </Link>
           
           {/* Desktop Menu - All items in one line */}
-          <nav className="hidden md:flex items-center space-x-6 flex-1">
+          <nav className="hidden md:flex items-center space-x-4">
             <ProductsDropdown isOpen={isProductsOpen} setIsOpen={setIsProductsOpen} />
-            <SolutionsDropdown isOpen={isSolutionsOpen} setIsOpen={setIsSolutionsOpen} />
+            <Link to="/solutions" className="text-neutral-700 hover:text-neutral-900 transition-all font-medium relative group text-sm px-2 py-1 rounded-lg">
+              Solutions
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
+            </Link>
             
             <a 
               href="#how-it-works" 
@@ -63,18 +65,14 @@ export default function Navbar() {
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
             </a>
-          </nav>
-          
-          {/* Sign Up Button */}
-          <div className="hidden md:flex items-center ml-4">
             <Button 
-              className="bg-neutral-900 hover:bg-neutral-800 transition-all duration-300 font-semibold rounded-xl text-white border-0 group text-sm px-4 py-2" 
+              className="bg-neutral-900 hover:bg-neutral-800 transition-all duration-300 font-semibold rounded-xl text-white border-0 group text-sm px-4 py-2 ml-2" 
               onClick={handleTrialClick}
             >
               <Sparkles className="w-3 h-3 mr-2 group-hover:animate-pulse" />
               Sign Up
             </Button>
-          </div>
+          </nav>
           
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center ml-auto">
