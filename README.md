@@ -1,73 +1,149 @@
-# Welcome to your Lovable project
+# Lumi6 - AI-Powered Language & EQ Assessment Platform
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/fbd5c451-d047-4e0e-83d2-2edcbc4ab00e
+Lumi6 is a modern SaaS platform that provides AI-powered language and emotional intelligence assessments for organizations. Built with cutting-edge technologies, it offers comprehensive solutions for talent acquisition, learning & development, and organizational growth.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+### Core Assessments
+- **Language Assessment**: CEFR-aligned tests for speaking, listening, grammar, and comprehension
+- **EQ Assessment**: AI-based emotional intelligence evaluation for self-awareness, regulation, and decision-making
+- **Custom Assessments**: Tailored solutions for specific organizational needs
 
-**Use Lovable**
+### Key Capabilities
+- Real-time AI analysis and scoring
+- Comprehensive analytics and reporting
+- Anti-cheating and proctoring features
+- Mobile-responsive design
+- Enterprise integrations (API, SSO, HRIS)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fbd5c451-d047-4e0e-83d2-2edcbc4ab00e) and start prompting.
+### Solutions by Department
+- **Talent Acquisition**: Streamline hiring with objective screening
+- **Learning & Development**: Track employee growth and skills development
+- **DE&I**: Promote fairness with data-driven assessments
+- **Internal Communications**: Enhance team collaboration
+- **Customer Success**: Improve client experiences
+- **People Strategy/HR**: Align talent strategy with business goals
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+This project is built with modern web technologies:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui for consistent, accessible components
+- **Routing**: React Router for seamless navigation
+- **Icons**: Lucide React for beautiful, consistent icons
+- **Deployment**: GitHub Pages (or your preferred hosting)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone https://github.com/lexiscore/Lumi6.git
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Navigate to the project directory
+cd Lumi6
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+# Start development server
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build for production
+npm run build
 
-## What technologies are used for this project?
+# Preview production build
+npm run preview
 
-This project is built with:
+# Type checking
+npm run type-check
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Lint code
+npm run lint
+```
 
-## How can I deploy this project?
+## Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/fbd5c451-d047-4e0e-83d2-2edcbc4ab00e) and click on Share -> Publish.
+```
+src/
+├── components/
+│   ├── landing/          # Landing page components
+│   └── ui/              # Reusable UI components
+├── pages/               # Page components
+├── styles/              # Global styles
+└── App.tsx             # Main application component
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Key Components
 
-Yes, you can!
+- **Navbar**: Modern, centered navigation with dropdown menus
+- **Hero Section**: Engaging landing page with clear value proposition
+- **Solutions Page**: Comprehensive overview of use cases and departments
+- **Trial Form Modal**: Beautiful sign-up form with Google Form integration
+- **Mobile Menu**: Responsive mobile navigation
+- **Footer**: Complete site footer with links and information
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Design System
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The project uses a modern design system inspired by Clay.com:
+- **Color Palette**: Neutral, purple, and vibrant accents
+- **Typography**: Clean, readable fonts with proper hierarchy
+- **Components**: Glassmorphism effects, subtle shadows, and smooth transitions
+- **Responsive**: Mobile-first design with breakpoint optimization
+
+## Deployment
+
+### GitHub Pages
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Other Platforms
+The project can be deployed to any static hosting service:
+- Vercel
+- Netlify
+- AWS S3
+- Firebase Hosting
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is proprietary software. All rights reserved.
+
+## Contact
+
+For questions or support, contact us at lexiscorehq@gmail.com
+
+---
+
+**Built with ❤️ using modern web technologies**
