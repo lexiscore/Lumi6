@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const steps = [
   {
     title: 'Select Assessment',
-    description: 'Choose from EQ assessment for emotional intelligence or language proficiency tests based on CEFR standards.',
+    description: 'Choose from language proficiency tests based on CEFR standards with comprehensive evaluation across all language skills.',
     color: 'from-purple-500 to-purple-600',
     number: '1'
   },
@@ -16,7 +16,7 @@ const steps = [
   },
   {
     title: 'Detailed Analysis',
-    description: 'Receive comprehensive reports with EQ breakdowns (self-awareness, social skills) or CEFR level indicators with speaking analysis.',
+    description: 'Receive comprehensive reports with CEFR level indicators, speaking analysis, and detailed performance breakdowns.',
     color: 'from-neutral-500 to-neutral-600',
     number: '3'
   },
@@ -44,7 +44,7 @@ export default function HowItWorks() {
             How Lumi6 Works
           </h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-8 text-neutral-600 font-normal px-4">
-            Our platform makes EQ and language assessment straightforward, secure, and insightful with these simple steps.
+            Our platform makes language assessment straightforward, secure, and insightful with these simple steps.
           </p>
         </div>
         
@@ -74,27 +74,27 @@ export default function HowItWorks() {
           </div>
           
           <div className="mt-12 sm:mt-16 md:mt-20 space-y-8 sm:space-y-12">
-            {/* EQ Assessment Flow */}
+            {/* Language Assessment Flow */}
             <div className="rounded-2xl bg-white/90 backdrop-blur-sm p-6 sm:p-8 border border-neutral-200 shadow-medium">
               <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 flex items-center gap-2 font-display">
-                <span className="text-xl sm:text-2xl">🧠</span> EQ Assessment Process
+                <span className="text-xl sm:text-2xl">📝</span> Language Assessment Process
               </h3>
               <p className="text-sm sm:text-base leading-relaxed mb-6 text-neutral-600 font-normal">
-                Our EQ assessment evaluates four core competencies: self-awareness, self-management, social awareness, and relationship management using validated psychological frameworks.
+                Our language assessment evaluates four core language skills: reading, writing, listening, and speaking using CEFR-aligned standards and AI-powered analysis.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                 {[
-                  { label: 'Self-Awareness', color: 'from-purple-400 to-purple-500', icon: '🔍' },
-                  { label: 'Self-Management', color: 'from-purple-500 to-purple-600', icon: '🎯' },
-                  { label: 'Social Awareness', color: 'from-vibrant-500 to-vibrant-600', icon: '👥' },
-                  { label: 'Relationship Management', color: 'from-vibrant-600 to-vibrant-700', icon: '🤝' }
-                ].map((competency, index) => (
+                  { label: 'Reading', color: 'from-purple-400 to-purple-500', icon: '📖' },
+                  { label: 'Writing', color: 'from-purple-500 to-purple-600', icon: '✍️' },
+                  { label: 'Listening', color: 'from-vibrant-500 to-vibrant-600', icon: '🎧' },
+                  { label: 'Speaking', color: 'from-vibrant-600 to-vibrant-700', icon: '🗣️' }
+                ].map((skill, index) => (
                   <div 
-                    key={competency.label} 
-                    className={`rounded-xl p-3 sm:p-4 text-center text-white bg-gradient-to-r transition-all duration-300 hover:scale-105 shadow-medium ${competency.color}`}
+                    key={skill.label} 
+                    className={`rounded-xl p-3 sm:p-4 text-center text-white bg-gradient-to-r transition-all duration-300 hover:scale-105 shadow-medium ${skill.color}`}
                   >
-                    <div className="text-xl sm:text-2xl mb-2">{competency.icon}</div>
-                    <div className="text-xs sm:text-sm font-medium">{competency.label}</div>
+                    <div className="text-xl sm:text-2xl mb-2">{skill.icon}</div>
+                    <div className="text-xs sm:text-sm font-medium">{skill.label}</div>
                   </div>
                 ))}
               </div>

@@ -45,7 +45,7 @@ export default function Hero() {
                 
                  {/* Refined description */}
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-neutral-600 max-w-2xl sm:max-w-3xl mx-auto font-normal mb-8 sm:mb-12 px-4">
-                  Corporate EQ and Language assessment, for people first organizations. Revolutionary <span className="text-vibrant-600 font-semibold">language proficiency</span> assessments 
+                  Corporate Language assessment, for people first organizations. Revolutionary <span className="text-vibrant-600 font-semibold">language proficiency</span> assessments 
                   powered by cutting-edge AI technology for global communication excellence.
                 </p>
                 

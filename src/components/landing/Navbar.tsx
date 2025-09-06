@@ -51,13 +51,6 @@ export default function Navbar() {
               CEFR Guide
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link 
-              to="/why-eq-test" 
-              className="text-neutral-700 hover:text-neutral-900 transition-all font-medium relative group text-sm"
-            >
-              Why EQ Test
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
-            </Link>
             <a 
               href="#contact" 
               className="text-neutral-700 hover:text-neutral-900 transition-all font-medium relative group text-sm"
