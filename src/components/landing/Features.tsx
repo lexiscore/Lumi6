@@ -31,15 +31,6 @@ const features = [
     category: 'language'
   },
   {
-    name: 'EQ Leadership Assessment',
-    description: 'Comprehensive EQ evaluation using Daniel Goleman\'s framework for self-awareness, empathy, and social skills.',
-    icon: Brain,
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-50',
-    borderColor: 'border-purple-200',
-    category: 'ei'
-  },
-  {
     name: 'Multiple Languages',
     description: 'Test your proficiency in numerous languages including English, Spanish, French, German, Chinese, and many more worldwide.',
     icon: Globe,
@@ -49,13 +40,22 @@ const features = [
     category: 'language'
   },
   {
-    name: 'Team Dynamics Evaluation',
-    description: 'Assess empathy, teamwork capabilities, and cross-cultural adaptability for role transitions and collaborative environments.',
+    name: 'Advanced Writing Assessment',
+    description: 'Comprehensive evaluation of written communication skills including grammar, vocabulary, coherence, and style.',
+    icon: Brain,
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-50',
+    borderColor: 'border-purple-200',
+    category: 'language'
+  },
+  {
+    name: 'Listening Comprehension',
+    description: 'Evaluate understanding of spoken language across various accents, speeds, and contexts for real-world communication.',
     icon: Users,
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
-    category: 'ei'
+    category: 'language'
   },
   {
     name: 'Instant Results',
@@ -68,7 +68,7 @@ const features = [
   },
   {
     name: 'Official Certification',
-    description: 'Receive official CEFR-aligned and EQ framework-based digital certificates that can be shared with institutions and employers.',
+    description: 'Receive official CEFR-aligned digital certificates that can be shared with institutions and employers worldwide.',
     icon: Award,
     color: 'text-neutral-600',
     bgColor: 'bg-neutral-50',
@@ -76,17 +76,17 @@ const features = [
     category: 'both'
   },
   {
-    name: 'Stress & Impulse Control',
-    description: 'Evaluate emotional regulation, stress management, and impulse control capabilities for high-pressure work environments.',
+    name: 'Reading Comprehension',
+    description: 'Assess text understanding, critical analysis, and interpretation skills across various document types and complexity levels.',
     icon: Heart,
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
-    category: 'ei'
+    category: 'language'
   },
   {
     name: 'Progress Tracking',
-    description: 'Monitor your language learning and EQ development with detailed analytics and personalized recommendations.',
+    description: 'Monitor your language learning progress with detailed analytics and personalized recommendations for improvement.',
     icon: Presentation,
     color: 'text-neutral-600',
     bgColor: 'bg-neutral-50',
@@ -112,7 +112,7 @@ export default function Features() {
             <span className="block bg-gradient-purple bg-clip-text text-transparent">workforce evaluation</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl leading-8 text-neutral-600 max-w-2xl mx-auto font-normal px-4">
-            Our platform offers a complete suite of tools to accurately measure language proficiency and EQ based on internationally-recognized frameworks.
+            Our platform offers a complete suite of tools to accurately measure language proficiency based on internationally-recognized CEFR frameworks.
           </p>
         </div>
         <div className="mx-auto mt-12 sm:mt-16 md:mt-20 max-w-6xl">
