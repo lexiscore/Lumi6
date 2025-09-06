@@ -43,11 +43,10 @@ export default function Hero() {
                   </span>
                 </h1>
                 
-                {/* Refined description */}
+                 {/* Refined description */}
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-neutral-600 max-w-2xl sm:max-w-3xl mx-auto font-normal mb-8 sm:mb-12 px-4">
-                  Revolutionary <span className="text-purple-600 font-semibold">emotional intelligence</span> and 
-                  <span className="text-vibrant-600 font-semibold"> language proficiency</span> assessments 
-                  powered by cutting-edge AI technology.
+                  Revolutionary <span className="text-vibrant-600 font-semibold">language proficiency</span> assessments 
+                  powered by cutting-edge AI technology for global communication excellence.
                 </p>
                 
                 {/* Clean CTA buttons */}
@@ -74,34 +73,34 @@ export default function Hero() {
                   </Button>
                 </div>
 
-                {/* Clean assessment cards */}
+                {/* Language Assessment Cards */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl sm:max-w-5xl mx-auto px-4">
-                  {/* EQ Assessment Card */}
+                  {/* Proficiency Test Card */}
                   <div className="group relative bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-2xl p-6 sm:p-8 shadow-medium hover:shadow-large transition-all duration-300 hover:scale-[1.02]">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-purple rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-purple-glow">
-                      <span className="text-2xl sm:text-3xl">🧠</span>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-vibrant rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-vibrant-glow">
+                      <span className="text-2xl sm:text-3xl">📝</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 font-display text-center">EQ Assessment</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 font-display text-center">Proficiency Test</h3>
                     <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 mb-4 sm:mb-6 text-center">
-                      Evaluate emotional intelligence across four core competencies for workplace success and leadership development.
+                      Comprehensive grammar, vocabulary, reading and listening assessment with CEFR-aligned scoring.
                     </p>
                     
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="bg-purple-50 text-purple-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-purple-200">Self-Awareness</span>
-                      <span className="bg-purple-50 text-purple-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-purple-200">Self-Management</span>
-                      <span className="bg-purple-50 text-purple-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-purple-200">Social Awareness</span>
-                      <span className="bg-purple-50 text-purple-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-purple-200">Relationship Management</span>
+                      <span className="bg-blue-50 text-blue-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-blue-200">Grammar</span>
+                      <span className="bg-blue-50 text-blue-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-blue-200">Vocabulary</span>
+                      <span className="bg-blue-50 text-blue-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-blue-200">Reading</span>
+                      <span className="bg-blue-50 text-blue-700 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium border border-blue-200">Listening</span>
                     </div>
                   </div>
                   
-                  {/* Language Assessment Card */}
+                  {/* Speaking Test Card */}
                   <div className="group relative bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-2xl p-6 sm:p-8 shadow-medium hover:shadow-large transition-all duration-300 hover:scale-[1.02]">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-vibrant rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-vibrant-glow">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-purple rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-purple-glow">
                       <span className="text-2xl sm:text-3xl">🗣️</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 font-display text-center">Language Proficiency</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 font-display text-center">Speaking Assessment</h3>
                     <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 mb-4 sm:mb-6 text-center">
-                      CEFR-aligned assessment with AI-powered speaking, proficiency and writing tests for global communication readiness.
+                      AI-powered spoken English evaluation with real-time pronunciation and fluency analysis.
                     </p>
                     
                     <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
